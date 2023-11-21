@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy 
@@ -13,7 +11,8 @@ public class Enemy
         stateMachine = new EnemyStateMachine();
     }
 
-    protected virtual void Update() {
+    protected virtual void Update()
+    {
         stateMachine.currentState.Update();
     }
 }
