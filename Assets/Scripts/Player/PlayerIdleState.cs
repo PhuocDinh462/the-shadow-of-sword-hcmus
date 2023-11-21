@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class PlayerIdleState : PlayerGroundedState
 {
     public PlayerIdleState(Player _player, PlayerStateMachine _stateMachine, string _animBoolname) : base(_player, _stateMachine, _animBoolname)
@@ -11,7 +7,7 @@ public class PlayerIdleState : PlayerGroundedState
     public override void Enter()
     {
         base.Enter();
-        player.ZeroVelocity();
+        player.SetZeroVelocity();
     }
 
     public override void Exit()

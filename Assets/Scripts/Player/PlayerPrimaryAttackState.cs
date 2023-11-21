@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerPrimaryAttackState : PlayerState
@@ -22,7 +20,7 @@ public class PlayerPrimaryAttackState : PlayerState
         stateTimer = .1f;
 
         player.anim.SetInteger("ComboCounter", comboCounter);
-    
+
         float attackDir = xInput != 0 ? xInput : player.facingDir;
 
         player.SetVelocity(player.attackMovement[comboCounter].x * attackDir, player.attackMovement[comboCounter].y);
@@ -43,7 +41,7 @@ public class PlayerPrimaryAttackState : PlayerState
         base.Update();
 
         if (stateTimer < 0)
-            player.ZeroVelocity();
+            player.SetZeroVelocity();
 
 
         if (triggerCalled)

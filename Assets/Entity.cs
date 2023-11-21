@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour
 {
+
     #region Components
     public Animator anim { get; private set; }
     public Rigidbody2D rb { get; private set; }
@@ -30,7 +31,6 @@ public class Entity : MonoBehaviour
 
     protected virtual void Update() { }
 
-
     #region Collision
     public virtual bool isGroundDetected() => Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, whatIsGround);
 
@@ -42,16 +42,14 @@ public class Entity : MonoBehaviour
         Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x + wallCheckDistance, wallCheck.position.y));
     }
     #endregion
-
     #region Velocity
-    public void ZeroVelocity() => rb.velocity = new Vector2(0, 0);
+    public void SetZeroVelocity() => rb.velocity = new Vector2(0, 0);
     public void SetVelocity(float _xVelocity, float _yVelocity)
     {
         rb.velocity = new Vector2(_xVelocity, _yVelocity);
-        FlipController(rb.velocity.x);
+        FlipController(_xVelocity);
     }
     #endregion
-
     #region Flip
     public virtual void FlipController(float _x)
     {

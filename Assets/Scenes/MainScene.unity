@@ -178,7 +178,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 190942566}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4488,7 +4488,7 @@ GameObject:
   - component: {fileID: 758764199}
   - component: {fileID: 758764198}
   - component: {fileID: 758764200}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Animator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4834,7 +4834,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1315615868}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4894,8 +4894,14 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 64
   moveSpeed: 2
   idleTime: 2
+  attackDistance: 1.5
+  attackCoolDown: 0.4
+  lastTimeAttacked: 0
 --- !u!50 &1370738874
 Rigidbody2D:
   serializedVersion: 4
@@ -10860,7 +10866,7 @@ GameObject:
   - component: {fileID: 1761097166}
   - component: {fileID: 1761097169}
   - component: {fileID: 1761097165}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10986,6 +10992,7 @@ GameObject:
   - component: {fileID: 1908757843}
   - component: {fileID: 1908757845}
   - component: {fileID: 1908757844}
+  - component: {fileID: 1908757846}
   m_Layer: 7
   m_Name: Animator
   m_TagString: Untagged
@@ -11081,6 +11088,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1908757846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908757842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c4be44356954e41a336be636cf42e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2012957024
 GameObject:
   m_ObjectHideFlags: 0
