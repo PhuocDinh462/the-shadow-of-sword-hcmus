@@ -4651,7 +4651,7 @@ Transform:
   m_GameObject: {fileID: 968597006}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.316, y: 0, z: 0}
+  m_LocalPosition: {x: 0.19, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4897,8 +4897,9 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
-  moveSpeed: 2
+  moveSpeed: 1.5
   idleTime: 2
+  battleTime: 7
   attackDistance: 1.5
   attackCoolDown: 0.4
   lastTimeAttacked: 0
