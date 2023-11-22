@@ -39,7 +39,7 @@ public class Enemy_Skeleton : Enemy
         }
     }
 
-    protected override bool CanbeStunned() {
+    public override bool CanbeStunned() {
         if (base.CanbeStunned())
         {
             stateMachine.ChangeState(stunState);
