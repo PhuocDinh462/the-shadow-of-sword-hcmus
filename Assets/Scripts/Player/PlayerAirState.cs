@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class PlayerAirState : PlayerState
 {
     public PlayerAirState(Player _player, PlayerStateMachine _stateMachine, string _animBoolname) : base(_player, _stateMachine, _animBoolname)
@@ -29,6 +25,6 @@ public class PlayerAirState : PlayerState
             stateMachine.ChangeState(player.idleState);
 
         if (xInput != 0)
-            player.SetVelocity(player.moveSpeed * .8f * xInput, rb.velocity.y);  
+            player.SetVelocity(player.moveSpeed * .8f * xInput, rb.velocity.y);
     }
 }

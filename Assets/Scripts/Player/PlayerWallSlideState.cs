@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerWallSlideState : PlayerState
@@ -37,6 +35,6 @@ public class PlayerWallSlideState : PlayerState
             player.SetVelocity(0, rb.velocity.y * .7f);
 
         if (player.isGroundDetected())
-            stateMachine.ChangeState(player.idleState); 
+            stateMachine.ChangeState(player.idleState);
     }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class playerCounterAttackState : PlayerState
@@ -32,7 +30,8 @@ public class playerCounterAttackState : PlayerState
         {
             if (hit.GetComponent<Enemy>() != null)
             {
-                if (hit.GetComponent<Enemy>().CanbeStunned()){
+                if (hit.GetComponent<Enemy>().CanbeStunned())
+                {
                     stateTimer = 10;
                     player.anim.SetBool("SuccessfulCounterAttack", true);
                 }
