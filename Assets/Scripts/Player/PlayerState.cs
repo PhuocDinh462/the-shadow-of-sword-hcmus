@@ -13,11 +13,11 @@ public class PlayerState
 
     protected float stateTimer;
     protected bool triggerCalled;
-    public PlayerState(Player _player, PlayerStateMachine _stateMachine, string _animBoolname)
+    public PlayerState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName)
     {
         this.player = _player;
         this.stateMachine = _stateMachine;
-        this.animBoolName = _animBoolname;
+        this.animBoolName = _animBoolName;
     }
 
     public virtual void Enter()

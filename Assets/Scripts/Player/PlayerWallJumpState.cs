@@ -1,6 +1,6 @@
 public class PlayerWallJumpState : PlayerState
 {
-    public PlayerWallJumpState(Player _player, PlayerStateMachine _stateMachine, string _animBoolname) : base(_player, _stateMachine, _animBoolname)
+    public PlayerWallJumpState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
     {
     }
 
