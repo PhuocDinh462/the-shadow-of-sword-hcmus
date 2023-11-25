@@ -12,10 +12,13 @@ public class Sword_Skill_Controller : MonoBehaviour
     private bool canRotate = true;
     private bool isReturning;
 
+    [Header("Pierce info")]
+    [SerializeField] private float pierceAmount;
+
     [Header("Bounce info")]
     [SerializeField] private float bounceSpeed;
     private bool isBouncing;
-    private int amountOfBounce;
+    private int bounceAmount;
     private List<Transform> enemyTarget;
     private int targetIndex;
 
@@ -34,13 +37,22 @@ public class Sword_Skill_Controller : MonoBehaviour
         rb.velocity = _dir;
         rb.gravityScale = _gravityScale;
 
-        anim.SetBool("Rotation", true);
+        if (pierceAmount <= 0)
+        {
+            anim.SetBool("Rotation", true);
+        }
+
     }
 
-    public void SetupBounce(bool _isBouncing, int _amountOfBounces){
+    public void SetupBounce(bool _isBouncing, int _bounceAmount){
         isBouncing = _isBouncing;
-        amountOfBounce = _amountOfBounces;
+        bounceAmount = _bounceAmount;
         enemyTarget = new List<Transform>();
+
+    }
+
+    public void SetupPierce(int _pierceAmount){
+        pierceAmount = _pierceAmount;
 
     }
 
@@ -73,9 +85,9 @@ public class Sword_Skill_Controller : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, enemyTarget[targetIndex].position, bounceSpeed * Time.deltaTime);
             if(Vector2.Distance(transform.position, enemyTarget[targetIndex].position) < .1f){
                 targetIndex++; // Choose next enemy in the list (enemyTarget)
-                amountOfBounce--;
+                bounceAmount--;
 
-                if(amountOfBounce <=0){
+                if(bounceAmount <=0){
                     isBouncing = false;
                     isReturning = true;
                 }
@@ -89,6 +101,8 @@ public class Sword_Skill_Controller : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (isReturning) return;
+
+        collision.GetComponent<Enemy>()?.Damage();
 
         if(collision.GetComponent<Enemy>() !=null){
             if(isBouncing && enemyTarget.Count <= 0){
@@ -107,6 +121,10 @@ public class Sword_Skill_Controller : MonoBehaviour
 
     private void StuckInto(Collider2D collision)
     {
+        if(pierceAmount > 0 && collision.GetComponent<Enemy>() != null){
+            pierceAmount--;
+            return;
+        }
 
         canRotate = false;
         cd.enabled = false;
