@@ -12,10 +12,11 @@ public class Sword_Skill_Controller : MonoBehaviour
     private bool canRotate = true;
     private bool isReturning;
 
-    public float bounceSpeed;
-    public bool isBouncing = true;
-    public int amountOfBounce = 4;
-    public List<Transform> enemyTarget;
+    [Header("Bounce info")]
+    [SerializeField] private float bounceSpeed;
+    private bool isBouncing;
+    private int amountOfBounce;
+    private List<Transform> enemyTarget;
     private int targetIndex;
 
 
@@ -34,6 +35,13 @@ public class Sword_Skill_Controller : MonoBehaviour
         rb.gravityScale = _gravityScale;
 
         anim.SetBool("Rotation", true);
+    }
+
+    public void SetupBounce(bool _isBouncing, int _amountOfBounces){
+        isBouncing = _isBouncing;
+        amountOfBounce = _amountOfBounces;
+        enemyTarget = new List<Transform>();
+
     }
 
     public void ReturnSword()
@@ -57,6 +65,9 @@ public class Sword_Skill_Controller : MonoBehaviour
                 player.CatchTheSword();
         }
 
+        BounceLogic();
+    }
+    private void BounceLogic(){
         if(isBouncing && enemyTarget.Count >0){
             // Debug.Log("Bounce");
             transform.position = Vector2.MoveTowards(transform.position, enemyTarget[targetIndex].position, bounceSpeed * Time.deltaTime);

@@ -4584,6 +4584,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 0
+  swordType: 0
+  amountOfBounce: 5
+  bounceGravity: 5
   swordPrefab: {fileID: 9102191153325843626, guid: 31d8eaef4d8be7b40b708253feed3dbe, type: 3}
   launchForce: {x: 35, y: 25}
   swordGravity: 4.5
