@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Enemy : Entity
@@ -8,6 +9,7 @@ public class Enemy : Entity
     public float moveSpeed;
     public float idleTime;
     public float battleTime;
+    private float defaultMoveSpeed;
 
     [Header("Stun info")]
     public float stunDuration;
@@ -29,6 +31,8 @@ public class Enemy : Entity
 
         stateMachine = new EnemyStateMachine();
 
+        defaultMoveSpeed = moveSpeed;
+
     }
 
     protected override void Update()
@@ -39,7 +43,25 @@ public class Enemy : Entity
 
     }
 
+    public virtual void FreezeTime(bool _timeFrozen){
+        if (_timeFrozen) {
+            moveSpeed = 0;
+            anim.speed = 0;
+        }
+        else{
+            moveSpeed = defaultMoveSpeed;
+            anim.speed = 1;
+        }
+    }
 
+    protected virtual IEnumerator FreezeTimerFor(float _seconds) {
+        FreezeTime(true);
+        yield return new WaitForSeconds(_seconds);
+        FreezeTime(false);
+    }
+
+
+    #region Counter Attack
     public virtual void OpenCounterAttackWindow()
     {
         canBeStunned = true;
@@ -51,6 +73,7 @@ public class Enemy : Entity
         canBeStunned= false;
         counterImage.SetActive(false);
     }
+    #endregion
 
     public virtual bool CanbeStunned()
     {
