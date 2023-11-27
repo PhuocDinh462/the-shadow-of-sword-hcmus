@@ -5070,6 +5070,9 @@ MonoBehaviour:
   cooldown: 0
   crystalDuration: 1.5
   crystalPrefab: {fileID: 8355737336378194048, guid: 8148c0f4b71b92f4bac3adcb93e2b9bf, type: 3}
+  canExplode: 1
+  canMoveToEnemy: 0
+  moveSpeed: 0
 --- !u!1 &385136084
 GameObject:
   m_ObjectHideFlags: 0
@@ -12754,10 +12757,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3128755261042155968, guid: 8148c0f4b71b92f4bac3adcb93e2b9bf, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3727504291684353323, guid: 8148c0f4b71b92f4bac3adcb93e2b9bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.356321
