@@ -27,10 +27,12 @@ public class Crystal_Skill : Skill
 
             Crystal_Skill_Controller currentCrystalScript = currentCrsytal.GetComponent<Crystal_Skill_Controller>();
 
-            currentCrystalScript.SetupCrystal(crystalDuration, canExplode, canMoveToEnemy, moveSpeed);
+            currentCrystalScript.SetupCrystal(crystalDuration, canExplode, canMoveToEnemy, moveSpeed, FindClosestEnemy(currentCrsytal.transform));
         }
         else
         {
+            if (canMoveToEnemy)
+                return;
             Vector2 playerPos = player.transform.position; 
             player.transform.position = currentCrsytal.transform.position;
             
