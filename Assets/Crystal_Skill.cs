@@ -8,6 +8,9 @@ public class Crystal_Skill : Skill
     [SerializeField] private GameObject crystalPrefab;
     private GameObject currentCrsytal;
 
+    [Header("Crystal Miracle")]
+    [SerializeField] private bool cloneInsteadOfCrystal;
+
 
     [Header("Explosive Crystal")]
     [SerializeField] private bool canExplode;
@@ -44,14 +47,22 @@ public class Crystal_Skill : Skill
             if (canMoveToEnemy)
                 return;
 
-
             Vector2 playerPos = player.transform.position; 
-
-            player.transform.position = currentCrsytal.transform.position;
-            
+            player.transform.position = currentCrsytal.transform.position;            
             currentCrsytal.transform.position = playerPos;
 
-            currentCrsytal.GetComponent<Crystal_Skill_Controller>()?.FinishCrystal();
+
+            if (cloneInsteadOfCrystal)
+            {
+                SkillManager.instance.clone.CreateClone(currentCrsytal.transform, Vector3.zero);
+                Destroy(currentCrsytal);
+            }
+            else
+            {
+                currentCrsytal.GetComponent<Crystal_Skill_Controller>()?.FinishCrystal();
+
+            }        
+
 
         }
     }
