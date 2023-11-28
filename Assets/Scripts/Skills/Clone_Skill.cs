@@ -8,11 +8,27 @@ public class Clone_Skill : Skill
     [Space]
     [SerializeField] private bool canAttack;
 
+    [SerializeField] private bool creatCloneOnDashStart;
+    [SerializeField] private bool createCloneOnDashOver;
+
 
     public void CreateClone(Transform _clonePosition, Vector3 _offset)
     {
         GameObject newClone = Instantiate(clonePrefab);
 
         newClone.GetComponent<Clone_Skill_Controller>().SetupClone(_clonePosition, cloneDuration, canAttack, _offset, FindClosestEnemy(newClone.transform));
+    }
+
+    public void CreateCloneOnDashStart()
+    {
+        if (creatCloneOnDashStart)
+            CreateClone(player.transform, Vector3.zero);
+
+    }
+
+    public void CreateCloneOnDashOver()
+    {
+        if (createCloneOnDashOver)
+            CreateClone(player.transform, Vector3.zero);
     }
 }
