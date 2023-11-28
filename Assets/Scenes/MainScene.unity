@@ -4914,7 +4914,7 @@ Transform:
   m_GameObject: {fileID: 322883797}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.15, y: -0.27, z: 0}
+  m_LocalPosition: {x: 35.9, y: -0.45, z: 0}
   m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -5003,12 +5003,12 @@ MonoBehaviour:
   clonePrefab: {fileID: 2479243650550556485, guid: 119e3e2b317d3a4419029a392977f7f8, type: 3}
   cloneDuration: 1.5
   canAttack: 1
-  creatCloneOnDashStart: 0
-  createCloneOnDashOver: 0
+  creatCloneOnDashStart: 1
+  createCloneOnDashOver: 1
   canCreateCloneOnCounterAttack: 1
   canDuplicateClone: 1
-  chanceToDuplicate: 99
-  crystalInsteadOfClone: 0
+  chanceToDuplicate: 0
+  crystalInsteadOfClone: 1
 --- !u!114 &378532586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5054,7 +5054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 0
-  amountOfAttacks: 1
+  amountOfAttacks: 7
   cloneCooldown: 0.35
   blackholeDuration: 3
   blackHolePrefab: {fileID: 5382686389160580995, guid: 277f14551e2cf45b5b426e7e06f6f5f1, type: 3}
@@ -5074,7 +5074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 0
-  crystalDuration: 5
+  crystalDuration: 1.5
   crystalPrefab: {fileID: 8355737336378194048, guid: 8148c0f4b71b92f4bac3adcb93e2b9bf, type: 3}
   cloneInsteadOfCrystal: 1
   canExplode: 1
@@ -5082,7 +5082,7 @@ MonoBehaviour:
   moveSpeed: 4
   canUseMultiStacks: 1
   amountOfStacks: 3
-  mutiStackCooldown: 4
+  mutiStackCooldown: 0
   useTimeWondow: 2.5
   crystalLeft:
   - {fileID: 8355737336378194048, guid: 8148c0f4b71b92f4bac3adcb93e2b9bf, type: 3}
@@ -5238,7 +5238,7 @@ Transform:
   m_GameObject: {fileID: 385136084}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.31, y: -0.38, z: 0}
+  m_LocalPosition: {x: 43.54, y: -0.43, z: 0}
   m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -5435,7 +5435,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.22175598, y: 0.2759602, z: -9.953972}
+  m_LocalPosition: {x: 0.05634117, y: 0.2759602, z: -9.953972}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12152,7 +12152,7 @@ Transform:
   m_GameObject: {fileID: 1761097164}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.81, y: 2.46, z: 0}
+  m_LocalPosition: {x: 22.07, y: 2.28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12696,7 +12696,7 @@ Transform:
   m_GameObject: {fileID: 2143149626}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.22175598, y: 0.2759602, z: -9.953972}
+  m_LocalPosition: {x: 0.05634117, y: 0.2759602, z: -9.953972}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12772,6 +12772,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2136140779847870893, guid: 8148c0f4b71b92f4bac3adcb93e2b9bf, type: 3}
+      propertyPath: WhatIsEnemy.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3727504291684353323, guid: 8148c0f4b71b92f4bac3adcb93e2b9bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.356321

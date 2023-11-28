@@ -70,7 +70,10 @@ public class Crystal_Skill : Skill
         Crystal_Skill_Controller currentCrystalScript = currentCrsytal.GetComponent<Crystal_Skill_Controller>();
 
         currentCrystalScript.SetupCrystal(crystalDuration, canExplode, canMoveToEnemy, moveSpeed, FindClosestEnemy(currentCrsytal.transform));
+
     }
+
+    public void CurrentCrystalChooseRandomTarget() => currentCrsytal.GetComponent<Crystal_Skill_Controller>().ChooseRamdomEnemy();
 
     private bool CanUseMultiCrystal()
     {
