@@ -15,8 +15,12 @@ public class Enemy_SkeletonAnimationTrigger : MonoBehaviour
 
         foreach(var hit in colliders)
         {
-            PlayerStats target = hit.GetComponent<PlayerStats>();
-            enemy.stats.DoDamage(target);
+            if(hit.GetComponent<Player>() != null)
+            {
+                PlayerStats target = hit.GetComponent<PlayerStats>();
+                enemy.stats.DoDamage(target);
+
+            }
         }
     }
 
