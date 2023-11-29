@@ -1,28 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+public class EnemyStat : CharacterStats {
 
-public class EnemyStat : CharacterStats
-{
+  private Enemy enemy;
+  protected override void Start() {
+    base.Start();
 
-    private Enemy enemy;
-    protected override void Start()
-    {
-        base.Start();
+    enemy = GetComponent<Enemy>();
+  }
 
-        enemy = GetComponent<Enemy>();
-    }
+  public override void TakeDamage(int _damage) {
+    base.TakeDamage(_damage);
 
-    public override void TakeDamage(int _damage)
-    {
-        base.TakeDamage(_damage);
+    enemy.DamageEffect();
+  }
 
-        enemy.DamageEffect();
-    }
-
-    protected override void Die()
-    {
-        base.Die();
-        enemy.Die();
-    }
+  protected override void Die() {
+    base.Die();
+    enemy.Die();
+  }
 }
