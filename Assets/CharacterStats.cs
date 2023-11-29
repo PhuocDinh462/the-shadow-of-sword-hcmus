@@ -33,9 +33,9 @@ public class CharacterStats : MonoBehaviour
 
     protected virtual void Start()
     {
+        critPower.SetDefaultValue(150);
         currentHealth = maxHealth.GetValue();
 
-        damage.AddModifier(4);
     }
 
     public virtual void DoDamage(CharacterStats _targetStats)
@@ -43,6 +43,10 @@ public class CharacterStats : MonoBehaviour
         if (TargetCanAvoidAttack(_targetStats)) return;
 
         int totalDamage = damage.GetValue() + strength.GetValue();
+
+        if(CanCrit()){
+            totalDamage = CalculateCriticalDamage(totalDamage);
+        }
 
 
         totalDamage = CheckTargetArmor(_targetStats, totalDamage);
@@ -87,5 +91,18 @@ public class CharacterStats : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    private bool CanCrit() {
+        int totalCriticalChance = critChance.GetValue() + agility.GetValue();
+        if(Random.Range(0,100) <= totalCriticalChance){
+            return true;
+        }
+        return false;
+    }
+    private int CalculateCriticalDamage(int _damage){
+        float totalCritPower = (critPower.GetValue() + strength.GetValue()) * .01f;
+        float critDamage = _damage * totalCritPower;
+        return Mathf.RoundToInt(critDamage);
     }
 }
