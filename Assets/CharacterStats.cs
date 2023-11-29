@@ -39,12 +39,16 @@ public class CharacterStats : MonoBehaviour
     private float igniteDamageTimer;
     private int igniteDamage;
 
-    [SerializeField] private int currentHealth;
+    public int currentHealth;
+
+    public System.Action onHealthChanged;
 
     protected virtual void Start()
     {
         critPower.SetDefaultValue(150);
-        currentHealth = maxHealth.GetValue();
+        currentHealth = GetMaxHealthValue();
+
+        Debug.Log("Characstats called");
 
     }
     protected virtual void Update()
@@ -72,8 +76,9 @@ public class CharacterStats : MonoBehaviour
         {
             Debug.Log("Take burn damage " + igniteDamage);
 
-            currentHealth -= igniteDamage;
-            if(currentHealth <0){
+            DecreaseHealthBy(igniteDamage);
+            if (currentHealth < 0)
+            {
                 Die();
             }
             igniteDamageTimer = igniteDamageCooldown;
@@ -116,22 +121,26 @@ public class CharacterStats : MonoBehaviour
         bool canApplyChill = _iceDamage > _fireDamage && _iceDamage > _lightingDamage;
         bool canApplyShock = _lightingDamage > _fireDamage && _lightingDamage > _iceDamage;
 
-        while(!canApplyIgnite && !canApplyChill && !canApplyShock){
-            if(Random.value < .3f && _fireDamage > 0){
+        while (!canApplyIgnite && !canApplyChill && !canApplyShock)
+        {
+            if (Random.value < .3f && _fireDamage > 0)
+            {
                 canApplyIgnite = true;
                 _targetStats.ApplyAilments(canApplyIgnite, canApplyChill, canApplyShock);
                 Debug.Log("Applied fire");
                 return;
             }
 
-            if(Random.value < .4f && _iceDamage > 0){
+            if (Random.value < .4f && _iceDamage > 0)
+            {
                 canApplyChill = true;
                 _targetStats.ApplyAilments(canApplyIgnite, canApplyChill, canApplyShock);
                 Debug.Log("Applied ice");
                 return;
             }
 
-            if(Random.value < .5f && _lightingDamage > 0){
+            if (Random.value < .5f && _lightingDamage > 0)
+            {
                 canApplyShock = true;
                 _targetStats.ApplyAilments(canApplyIgnite, canApplyChill, canApplyShock);
                 Debug.Log("Applied electric");
@@ -158,7 +167,8 @@ public class CharacterStats : MonoBehaviour
     {
         if (isIgnited || isChilled || isShocked) return;
 
-        if(_ignite){
+        if (_ignite)
+        {
             isIgnited = _ignite;
             ignitedTimer = ailmentsDuaration;
 
@@ -167,7 +177,7 @@ public class CharacterStats : MonoBehaviour
         {
             isChilled = _chill;
             chilledTimer = ailmentsDuaration;
-            
+
         }
         if (_shock)
         {
@@ -178,18 +188,26 @@ public class CharacterStats : MonoBehaviour
 
     }
 
-   public void SetupIgniteDamage(int _damage) => igniteDamage = _damage;
+    public void SetupIgniteDamage(int _damage) => igniteDamage = _damage;
 
     public virtual void TakeDamage(int _damage)
     {
-        currentHealth -= _damage;
+        DecreaseHealthBy(_damage);
 
         Debug.Log(_damage);
 
         if (currentHealth < 0)
         {
-
             Die();
+        }
+    }
+
+    protected virtual void DecreaseHealthBy(int _damage)
+    {
+        currentHealth -= _damage;
+        if (onHealthChanged != null)
+        {
+            onHealthChanged();
         }
     }
 
@@ -244,5 +262,10 @@ public class CharacterStats : MonoBehaviour
         float totalCritPower = (critPower.GetValue() + strength.GetValue()) * .01f;
         float critDamage = _damage * totalCritPower;
         return Mathf.RoundToInt(critDamage);
+    }
+
+    public int GetMaxHealthValue()
+    {
+        return maxHealth.GetValue() + vitality.GetValue() * 5;
     }
 }
