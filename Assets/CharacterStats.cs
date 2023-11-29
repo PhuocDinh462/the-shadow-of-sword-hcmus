@@ -44,18 +44,48 @@ public class CharacterStats : MonoBehaviour
 
         int totalDamage = damage.GetValue() + strength.GetValue();
 
-        if(CanCrit()){
+        if (CanCrit())
+        {
             totalDamage = CalculateCriticalDamage(totalDamage);
         }
 
 
         totalDamage = CheckTargetArmor(_targetStats, totalDamage);
 
-        _targetStats.TakeDamge(totalDamage);
+        // _targetStats.TakeDamage(totalDamage);
+        DoMagicalDamage(_targetStats);
+
+    }
+    public virtual void DoMagicalDamage(CharacterStats _targetStats)
+    {
+        int _fireDamage = fireDamage.GetValue();
+        int _iceDamage = iceDamage.GetValue();
+        int _lightingDamage = lightingDamage.GetValue();
+
+        int totalMagicalDamage = _fireDamage + _iceDamage + _lightingDamage + intelligence.GetValue();
+
+        totalMagicalDamage = CheckTargetResistance(_targetStats, totalMagicalDamage);
+        _targetStats.TakeDamage(totalMagicalDamage);
+
+    }
+    private static int CheckTargetResistance(CharacterStats _targetStats, int totalMagicalDamage)
+    {
+        totalMagicalDamage -= _targetStats.magicResistance.GetValue() + (_targetStats.intelligence.GetValue() * 3);
+        totalMagicalDamage = Mathf.Clamp(totalMagicalDamage, 0, int.MaxValue);
+        return totalMagicalDamage;
+    }
+
+    public void ApplyAilments(bool _ignite, bool _chill, bool _shock)
+    {
+        if (isIgnited || isChilled || isShocked) return;
+
+        isIgnited = _ignite;
+        isChilled = _chill;
+        isShocked = _shock;
 
     }
 
-    public virtual void TakeDamge(int _damage)
+    public virtual void TakeDamage(int _damage)
     {
         currentHealth -= _damage;
 
@@ -93,14 +123,17 @@ public class CharacterStats : MonoBehaviour
         return false;
     }
 
-    private bool CanCrit() {
+    private bool CanCrit()
+    {
         int totalCriticalChance = critChance.GetValue() + agility.GetValue();
-        if(Random.Range(0,100) <= totalCriticalChance){
+        if (Random.Range(0, 100) <= totalCriticalChance)
+        {
             return true;
         }
         return false;
     }
-    private int CalculateCriticalDamage(int _damage){
+    private int CalculateCriticalDamage(int _damage)
+    {
         float totalCritPower = (critPower.GetValue() + strength.GetValue()) * .01f;
         float critDamage = _damage * totalCritPower;
         return Mathf.RoundToInt(critDamage);
