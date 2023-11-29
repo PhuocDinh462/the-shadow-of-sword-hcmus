@@ -51,7 +51,15 @@ public class Entity : MonoBehaviour
 
     protected virtual void Update() { }
 
+    public virtual void SlowEntityBy(float _slowPercentage, float _slowDuration)
+    {
 
+    }
+
+    protected virtual void ReturnDefaultSpeed()
+    {
+        anim.speed = 1;
+    }
     public virtual void DamageEffect()
     {
         fx.StartCoroutine("FlashFX");
@@ -83,12 +91,12 @@ public class Entity : MonoBehaviour
     }
     #endregion
     #region Velocity
-    public void SetZeroVelocity() 
+    public void SetZeroVelocity()
     {
         if (isKnocked)
             return;
         rb.velocity = new Vector2(0, 0);
-    } 
+    }
     public void SetVelocity(float _xVelocity, float _yVelocity)
     {
         if (isKnocked)
@@ -117,11 +125,14 @@ public class Entity : MonoBehaviour
     }
     #endregion
 
-    public void MakeTransparent(bool _transparent){
-        if(_transparent){
+    public void MakeTransparent(bool _transparent)
+    {
+        if (_transparent)
+        {
             sr.color = Color.clear;
         }
-        else{
+        else
+        {
             sr.color = Color.white;
         }
     }

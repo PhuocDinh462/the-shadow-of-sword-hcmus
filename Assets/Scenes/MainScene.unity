@@ -5971,7 +5971,7 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
-  moveSpeed: 1.5
+  moveSpeed: 2
   idleTime: 2
   battleTime: 7
   stunDuration: 1
@@ -6100,7 +6100,7 @@ MonoBehaviour:
     baseValue: 5
     modifiers: 
   iceDamage:
-    baseValue: 5
+    baseValue: 6
     modifiers: 
   lightingDamage:
     baseValue: 5
@@ -12333,10 +12333,10 @@ MonoBehaviour:
     baseValue: 1
     modifiers: 
   fireDamage:
-    baseValue: 10
+    baseValue: 1
     modifiers: 
   iceDamage:
-    baseValue: 0
+    baseValue: 2
     modifiers: 
   lightingDamage:
     baseValue: 0
