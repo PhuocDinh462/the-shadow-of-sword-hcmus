@@ -1,51 +1,46 @@
 using UnityEngine;
 
-public class PlayerPrimaryAttackState : PlayerState
-{
-    private int comboCounter;
-    private float lastTimeAttacked;
-    private float comboWindow = 2;
+public class PlayerPrimaryAttackState : PlayerState {
+  private int comboCounter;
+  private float lastTimeAttacked;
+  private float comboWindow = 2;
 
-    public PlayerPrimaryAttackState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
-    {
-    }
+  public PlayerPrimaryAttackState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName) {
+  }
 
-    public override void Enter()
-    {
-        base.Enter();
-        xInput = 0;
+  public override void Enter() {
+    base.Enter();
+    xInput = 0;
 
-        if (comboCounter > 2 || Time.time >= lastTimeAttacked + comboWindow)
-            comboCounter = 0;
+    if (comboCounter > 2 || Time.time >= lastTimeAttacked + comboWindow)
+      comboCounter = 0;
 
-        stateTimer = .1f;
+    stateTimer = .1f;
 
-        player.anim.SetInteger("ComboCounter", comboCounter);
+    player.anim.SetInteger("ComboCounter", comboCounter);
 
-        float attackDir = xInput != 0 ? xInput : player.facingDir;
+    float attackDir = xInput != 0 ? xInput : player.facingDir;
 
-        player.SetVelocity(player.attackMovement[comboCounter].x * attackDir, player.attackMovement[comboCounter].y);
-    }
+    player.SetVelocity(player.attackMovement[comboCounter].x * attackDir, player.attackMovement[comboCounter].y);
+  }
 
-    public override void Exit()
-    {
-        base.Exit();
+  public override void Exit() {
+    base.Exit();
 
-        player.StartCoroutine("BusyFor", .15f);
+    player.StartCoroutine("BusyFor", .15f);
 
-        comboCounter++;
-        lastTimeAttacked = Time.time;
-    }
+    comboCounter++;
+    lastTimeAttacked = Time.time;
+  }
 
-    public override void Update()
-    {
-        base.Update();
+  public override void Update() {
+    base.Update();
 
-        if (stateTimer < 0)
-            player.SetZeroVelocity();
+    if (stateTimer < 0)
+      player.SetZeroVelocity();
 
 
-        if (triggerCalled)
-            stateMachine.ChangeState(player.idleState);
-    }
+    if (triggerCalled)
+      stateMachine.ChangeState(player.idleState);
+  }
 }

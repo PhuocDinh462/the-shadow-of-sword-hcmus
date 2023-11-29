@@ -1,31 +1,25 @@
 using UnityEngine;
 
-public class PlayerAnimationTriggers : MonoBehaviour
-{
-    private Player player => GetComponentInParent<Player>();
+public class PlayerAnimationTriggers : MonoBehaviour {
+  private Player player => GetComponentInParent<Player>();
 
-    private void AnimationTrigger()
-    {
-        player.AnimationTrigger();
+  private void AnimationTrigger() {
+    player.AnimationTrigger();
+  }
+
+  private void AttackTrigger() {
+    Collider2D[] colliders = Physics2D.OverlapCircleAll(player.attackCheck.position, player.attackCheckRadius);
+
+    foreach (var hit in colliders) {
+      if (hit.GetComponent<Enemy>() != null) {
+        EnemyStat _target = hit.GetComponent<EnemyStat>();
+
+        player.stats.DoDamage(_target);
+      }
     }
+  }
 
-    private void AttackTrigger()
-    {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(player.attackCheck.position, player.attackCheckRadius);
-
-        foreach (var hit in colliders)
-        {
-            if (hit.GetComponent<Enemy>() != null)
-            {
-                EnemyStat _target = hit.GetComponent<EnemyStat>();
-
-                player.stats.DoDamage(_target);
-            }
-        }
-    }
-
-    private void ThrowSword()
-    {
-        SkillManager.instance.sword.CreateSword();
-    }
+  private void ThrowSword() {
+    SkillManager.instance.sword.CreateSword();
+  }
 }
