@@ -5309,15 +5309,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b781ea9ef71ac4da08f7bd7a3d0364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  strength:
+    baseValue: 0
+    modifiers: 
+  agility:
+    baseValue: 0
+    modifiers: 
+  intelligence:
+    baseValue: 0
+    modifiers: 
+  vitality:
+    baseValue: 0
+    modifiers: 
   damage:
     baseValue: 10
+    modifiers: 
+  critChance:
+    baseValue: 0
+    modifiers: 
+  critPower:
+    baseValue: 0
     modifiers: 
   maxHealth:
     baseValue: 1000
     modifiers: 
-  strength:
+  armor:
     baseValue: 0
     modifiers: 
+  evasion:
+    baseValue: 0
+    modifiers: 
+  magicResistance:
+    baseValue: 0
+    modifiers: 
+  fireDamage:
+    baseValue: 0
+    modifiers: 
+  iceDamage:
+    baseValue: 0
+    modifiers: 
+  lightingDamage:
+    baseValue: 0
+    modifiers: 
+  isIgnited: 0
+  isChilled: 0
+  isShocked: 0
   currentHealth: 0
 --- !u!70 &1370738879
 CapsuleCollider2D:
@@ -11462,15 +11498,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd82126ba7c0f044a889a7a4d3cc9695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  strength:
+    baseValue: 0
+    modifiers: 
+  agility:
+    baseValue: 0
+    modifiers: 
+  intelligence:
+    baseValue: 0
+    modifiers: 
+  vitality:
+    baseValue: 0
+    modifiers: 
   damage:
     baseValue: 5
+    modifiers: 
+  critChance:
+    baseValue: 0
+    modifiers: 
+  critPower:
+    baseValue: 0
     modifiers: 
   maxHealth:
     baseValue: 1000
     modifiers: 
-  strength:
+  armor:
+    baseValue: 20
+    modifiers: 
+  evasion:
     baseValue: 0
     modifiers: 
+  magicResistance:
+    baseValue: 0
+    modifiers: 
+  fireDamage:
+    baseValue: 0
+    modifiers: 
+  iceDamage:
+    baseValue: 0
+    modifiers: 
+  lightingDamage:
+    baseValue: 0
+    modifiers: 
+  isIgnited: 0
+  isChilled: 0
+  isShocked: 0
   currentHealth: 0
 --- !u!1 &1908757842
 GameObject:
