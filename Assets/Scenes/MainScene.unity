@@ -5354,6 +5354,7 @@ MonoBehaviour:
   isIgnited: 0
   isChilled: 0
   isShocked: 0
+  ailmentsDuaration: 4
   currentHealth: 0
 --- !u!70 &1370738879
 CapsuleCollider2D:
@@ -11532,7 +11533,7 @@ MonoBehaviour:
     baseValue: 1
     modifiers: 
   fireDamage:
-    baseValue: 0
+    baseValue: 10
     modifiers: 
   iceDamage:
     baseValue: 0
@@ -11543,6 +11544,7 @@ MonoBehaviour:
   isIgnited: 0
   isChilled: 0
   isShocked: 0
+  ailmentsDuaration: 4
   currentHealth: 0
 --- !u!1 &1908757842
 GameObject:
