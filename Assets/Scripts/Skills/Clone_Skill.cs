@@ -8,7 +8,7 @@ public class Clone_Skill : Skill {
   [Space]
   [SerializeField] private bool canAttack;
 
-  [SerializeField] private bool creatCloneOnDashStart;
+  [SerializeField] private bool createCloneOnDashStart;
   [SerializeField] private bool createCloneOnDashOver;
   [SerializeField] private bool canCreateCloneOnCounterAttack;
 
@@ -37,7 +37,7 @@ public class Clone_Skill : Skill {
   }
 
   public void CreateCloneOnDashStart() {
-    if (creatCloneOnDashStart)
+    if (createCloneOnDashStart)
       CreateClone(player.transform, Vector3.zero);
 
   }
