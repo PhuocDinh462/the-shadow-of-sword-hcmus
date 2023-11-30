@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ItemObject : MonoBehaviour {
@@ -15,7 +13,7 @@ public class ItemObject : MonoBehaviour {
 
   private void OnTriggerEnter2D(Collider2D collision) {
     if (collision.GetComponent<Player>() != null) {
-      Debug.Log("Picked up item " + itemData.itemName);
+      Inventory.instance.AddItem(itemData);
       Destroy(gameObject);
     }
   }
