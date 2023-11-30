@@ -6577,7 +6577,7 @@ RectTransform:
   m_Father: {fileID: 811204520}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7694,7 +7694,7 @@ GameObject:
   - component: {fileID: 813512943}
   - component: {fileID: 813512942}
   m_Layer: 0
-  m_Name: Item object - Nice armor
+  m_Name: Item object - Plate armor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9279,7 +9279,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1370738873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9437,8 +9437,8 @@ MonoBehaviour:
   iceDamage:
     baseValue: 2
     modifiers: 
-  lightingDamage:
-    baseValue: 5
+  lightningDamage:
+    baseValue: 0
     modifiers: 
   isIgnited: 0
   isChilled: 0
@@ -9446,6 +9446,8 @@ MonoBehaviour:
   ailmentsDuration: 2
   shockStrikePrefab: {fileID: 3288421031432038906, guid: c51c1e8ac52ea46bdb3a82f5f12d7384, type: 3}
   currentHealth: 0
+  level: 3
+  percentageModifier: 0.4
 --- !u!70 &1370738879
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -16696,8 +16698,8 @@ MonoBehaviour:
   iceDamage:
     baseValue: 2
     modifiers: 
-  lightingDamage:
-    baseValue: 3
+  lightningDamage:
+    baseValue: 0
     modifiers: 
   isIgnited: 0
   isChilled: 0
