@@ -9,8 +9,6 @@ public class PlayerStats : CharacterStats {
 
   public override void TakeDamage(int _damage) {
     base.TakeDamage(_damage);
-
-    player.DamageEffect();
   }
 
 
