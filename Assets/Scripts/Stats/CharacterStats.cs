@@ -24,7 +24,7 @@ public class CharacterStats : MonoBehaviour {
   [Header("Magic stats")]
   public Stat fireDamage;
   public Stat iceDamage;
-  public Stat lightingDamage;
+  public Stat lightningDamage;
 
   public bool isIgnited; // make damage overtime
   public bool isChilled; // reduce armor by 20%
@@ -96,7 +96,7 @@ public class CharacterStats : MonoBehaviour {
   public virtual void DoMagicalDamage(CharacterStats _targetStats) {
     int _fireDamage = fireDamage.GetValue();
     int _iceDamage = iceDamage.GetValue();
-    int _lightingDamage = lightingDamage.GetValue();
+    int _lightingDamage = lightningDamage.GetValue();
 
     int totalMagicalDamage = _fireDamage + _iceDamage + _lightingDamage + intelligence.GetValue();
 
