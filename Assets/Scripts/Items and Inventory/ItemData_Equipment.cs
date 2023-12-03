@@ -12,6 +12,8 @@ public enum EquipmentType {
 public class ItemData_Equipment : ItemData {
   public EquipmentType equipmentType;
 
+  public ItemEffect[] itemEffects;
+
   [Header("Major stats")]
   public int strength;
   public int agility;
@@ -37,6 +39,13 @@ public class ItemData_Equipment : ItemData {
 
   [Header("Craft requirements")]
   public List<InventoryItem> craftingMaterials;
+
+  public void ExecuteItemEffect() {
+
+    foreach (var item in itemEffects) {
+      item.ExecuteEffect();
+    }
+  }
 
   public void AddModifiers() {
     PlayerStats playerStats = PlayerManager.instance.player.GetComponent<PlayerStats>();
