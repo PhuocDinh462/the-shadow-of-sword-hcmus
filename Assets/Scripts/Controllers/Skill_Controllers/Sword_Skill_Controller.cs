@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class Sword_Skill_Controller : MonoBehaviour {
@@ -118,7 +119,7 @@ public class Sword_Skill_Controller : MonoBehaviour {
       if (wasStopped) {
         spinTimer -= Time.deltaTime;
 
-        transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x + spinDirection, transform.position.y), 1.5f * Time.deltaTime);
+        //transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x + spinDirection, transform.position.y), 1.5f * Time.deltaTime);
 
         if (spinTimer < 0) {
           isReturning = true;
@@ -185,6 +186,11 @@ public class Sword_Skill_Controller : MonoBehaviour {
   private void SwordSkillDamage(Enemy enemy) {
     player.stats.DoDamage(enemy.GetComponent<CharacterStats>());
     enemy.StartCoroutine("FreezeTimerFor", freezeTimeDuration);
+
+    ItemData_Equipment equipedAmulet = Inventory.instance.GetEquipment(EquipmentType.Amulet);
+
+    if (equipedAmulet != null)
+      equipedAmulet.Effect(enemy.transform);
   }
 
   private void SetupTargetForBounce(Collider2D collision) {

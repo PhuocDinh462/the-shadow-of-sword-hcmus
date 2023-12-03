@@ -38,7 +38,7 @@ public class Crystal_Skill_Controller : MonoBehaviour {
       closestTarget = colliders[Random.Range(0, colliders.Length)].transform;
   }
 
-  public void Update() {
+  private void Update() {
     crystalExistTimer -= Time.deltaTime;
 
     if (crystalExistTimer < 0) {
@@ -61,12 +61,20 @@ public class Crystal_Skill_Controller : MonoBehaviour {
       transform.localScale = Vector2.Lerp(transform.localScale, new Vector2(3, 3), growSpeed * Time.deltaTime);
   }
 
-  public void AnimationExplodeEvent() {
+  private void AnimationExplodeEvent() {
     Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, cd.radius);
 
     foreach (var hit in colliders) {
-      if (hit.GetComponent<Enemy>() != null)
+      if (hit.GetComponent<Enemy>() != null) {
+
         player.stats.DoMagicalDamage(hit.GetComponent<CharacterStats>());
+
+        ItemData_Equipment equipedAmulet = Inventory.instance.GetEquipment(EquipmentType.Amulet);
+
+        if(equipedAmulet != null) 
+          equipedAmulet.Effect(hit.transform);
+        
+      }
     }
   }
 

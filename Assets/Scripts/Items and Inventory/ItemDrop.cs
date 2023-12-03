@@ -18,11 +18,12 @@ public class ItemDrop : MonoBehaviour
     }
 
     for (int i = 0; i < possibleItemDrop; i++) {
+      int index = Random.Range(0, dropList.Count - 1);
+      Debug.Log("Index item drop: " + index);
+      ItemData randomItem = dropList[index];
 
-        ItemData randomItem = dropList[Random.Range(0, dropList.Count - 1)];
-
-        dropList.Remove(randomItem);
-        DropItem(randomItem);
+      dropList.Remove(randomItem);
+      DropItem(randomItem);
     }
   }
 
