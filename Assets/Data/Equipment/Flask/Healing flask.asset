@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 1
   itemName: Healing flask
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: -410334530, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
   dropChance: 0
   equipmentType: 3
+  itemCoolDown: 5
   itemEffects:
   - {fileID: 11400000, guid: 82e086c9c3ea1bf4193aa29053d7d371, type: 2}
   strength: 0

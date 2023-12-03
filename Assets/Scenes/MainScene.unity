@@ -16564,7 +16564,7 @@ MonoBehaviour:
     baseValue: 0
     modifiers: 
   iceDamage:
-    baseValue: 1
+    baseValue: 0
     modifiers: 
   lightningDamage:
     baseValue: 0
@@ -17301,10 +17301,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f7b77c09d852631408697a2599e14791, type: 2}
   - {fileID: 11400000, guid: f7b77c09d852631408697a2599e14791, type: 2}
   - {fileID: 11400000, guid: b1d53f2c4d3259f48bd59d016c4edddc, type: 2}
-  - {fileID: 11400000, guid: 70008df554fb18445b22d08c42bd5d00, type: 2}
   - {fileID: 11400000, guid: 5d6706a9e669cf14ebb7b80edb392655, type: 2}
   - {fileID: 11400000, guid: 9a8bc3910fdc88e4bb493a2305ad9082, type: 2}
   - {fileID: 11400000, guid: 56ab6651176a7ed40b35b05946884402, type: 2}
+  - {fileID: 11400000, guid: 70008df554fb18445b22d08c42bd5d00, type: 2}
+  - {fileID: 11400000, guid: a56711074192a4d4c9f0f9a9180bfe58, type: 2}
+  - {fileID: 11400000, guid: 505a403de457efa44a3090fda4d9d483, type: 2}
   equipment:
   - data: {fileID: 0}
     stackSize: 0
