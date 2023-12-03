@@ -8694,7 +8694,7 @@ Transform:
   m_GameObject: {fileID: 1370738872}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.11, y: -0.27, z: 0}
+  m_LocalPosition: {x: 28.04, y: -0.52, z: 0}
   m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -15916,15 +15916,15 @@ MonoBehaviour:
     baseValue: 1
     modifiers: 
   iceDamage:
-    baseValue: 2
+    baseValue: 0
     modifiers: 
   lightningDamage:
-    baseValue: 0
+    baseValue: 5
     modifiers: 
   isIgnited: 0
   isChilled: 0
   isShocked: 0
-  ailmentsDuration: 2
+  ailmentsDuration: 4
   shockStrikePrefab: {fileID: 3288421031432038906, guid: c51c1e8ac52ea46bdb3a82f5f12d7384, type: 3}
   currentHealth: 0
 --- !u!114 &1761097172
@@ -16578,6 +16578,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 51a4ffa262b82c2439d23f1e386ad9ec, type: 2}
   - {fileID: 11400000, guid: f7b77c09d852631408697a2599e14791, type: 2}
   - {fileID: 11400000, guid: f7b77c09d852631408697a2599e14791, type: 2}
+  - {fileID: 11400000, guid: b1d53f2c4d3259f48bd59d016c4edddc, type: 2}
   equipment: []
   inventory: []
   stash: []

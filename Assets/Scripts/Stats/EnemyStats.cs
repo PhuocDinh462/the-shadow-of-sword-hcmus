@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyStat : CharacterStats {
+public class EnemyStats : CharacterStats {
 
   private Enemy enemy;
   private ItemDrop myDropSystem;

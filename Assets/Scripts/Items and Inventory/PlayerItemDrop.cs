@@ -9,7 +9,7 @@ public class PlayerItemDrop : ItemDrop
   [SerializeField] private float chanceToLooseMaterials;
 
   public override void GenerateDrop() {
-    base.GenerateDrop();
+    //base.GenerateDrop();
 
     Inventory inventory = Inventory.instance;
 

@@ -9,6 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f5e1dd8edfd0f243abd616aeb0a990a, type: 3}
-  m_Name: Thunder strike
+  m_Script: {fileID: 11500000, guid: 66198818ec0222b458ddd53d3dc61cf6, type: 3}
+  m_Name: Thuner strike effect
   m_EditorClassIdentifier: 
+  thunderStrikePrefab: {fileID: 3758157034871157926, guid: 1acf7e92ff2ebfe46a33d41bedf61bc0, type: 3}
