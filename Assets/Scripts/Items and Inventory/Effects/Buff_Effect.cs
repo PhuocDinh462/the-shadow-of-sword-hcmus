@@ -27,7 +27,7 @@ public class Buff_Effect : ItemEffect
   private PlayerStats stats;
   [SerializeField] private StatType buffType; 
   [SerializeField] private int buffAmount;
-  [SerializeField] private int buffDuration;
+  [SerializeField] private float buffDuration;
   public override void ExecuteEffect(Transform _enemyPosition) {
     
     stats = PlayerManager.instance.player.GetComponent<PlayerStats>();

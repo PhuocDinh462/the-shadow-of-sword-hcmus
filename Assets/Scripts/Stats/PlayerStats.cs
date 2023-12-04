@@ -19,4 +19,12 @@ public class PlayerStats : CharacterStats {
 
     GetComponent<PlayerItemDrop>()?.GenerateDrop();
   }
+
+  protected override void DecreaseHealthBy(int _damage) {
+    base.DecreaseHealthBy(_damage);
+
+    ItemData_Equipment currentAmor = Inventory.instance.GetEquipment(EquipmentType.Armor);
+
+    currentAmor?.Effect(player.transform);
+  }
 }
