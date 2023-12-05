@@ -1,9 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerItemDrop : ItemDrop
-{
+public class PlayerItemDrop : ItemDrop {
   [Header("Player's drop")]
   [SerializeField] private float chanceToLooseItems;
   [SerializeField] private float chanceToLooseMaterials;

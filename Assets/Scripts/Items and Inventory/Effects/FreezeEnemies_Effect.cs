@@ -1,12 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
 [CreateAssetMenu(fileName = "Freeze enemies Effect", menuName = "Data/Item effect/Freeze enemies effect")]
 
-public class FreezeEnemies_Effect : ItemEffect
-{
+public class FreezeEnemies_Effect : ItemEffect {
   [SerializeField] private float duration;
 
   public override void ExecuteEffect(Transform _transform) {

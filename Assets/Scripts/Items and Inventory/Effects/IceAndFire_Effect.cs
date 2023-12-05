@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Ice and Fire effect", menuName = "Data/Item effect/Ice and Fire")]
 
-public class IceAndFire_Effect : ItemEffect
-{
+public class IceAndFire_Effect : ItemEffect {
   [SerializeField] private GameObject iceAndFirePrefab;
   [SerializeField] private float xVelocity;
 
