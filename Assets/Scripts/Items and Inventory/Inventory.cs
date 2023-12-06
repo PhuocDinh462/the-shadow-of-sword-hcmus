@@ -217,14 +217,14 @@ public class Inventory : MonoBehaviour {
 
   public ItemData_Equipment GetEquipment(EquipmentType _type) {
 
-    ItemData_Equipment equipedItem = null;
+    ItemData_Equipment equippedItem = null;
 
     foreach (KeyValuePair<ItemData_Equipment, InventoryItem> item in equipmentDictionary) {
       if (item.Key.equipmentType == _type)
-        equipedItem = item.Key;
+        equippedItem = item.Key;
     }
 
-    return equipedItem;
+    return equippedItem;
   }
 
   public void UseFlask() {
@@ -239,7 +239,7 @@ public class Inventory : MonoBehaviour {
 
       currentFlask.Effect(null);
       lastTimeUsedFlask = Time.time;
-      flaskCooldown = currentFlask.itemCoolDown;
+      flaskCooldown = currentFlask.itemCooldown;
     }
     else Debug.Log("Flask on cooldown");
   }
@@ -250,7 +250,7 @@ public class Inventory : MonoBehaviour {
 
     if (Time.time > lastTimeUsedArmor + armorCooldown) {
 
-      armorCooldown = currentArmor.itemCoolDown;
+      armorCooldown = currentArmor.itemCooldown;
       lastTimeUsedArmor = Time.time;
       return true;
     }
