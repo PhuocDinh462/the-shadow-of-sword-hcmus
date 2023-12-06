@@ -307,7 +307,7 @@ TextureImporter:
       name: artdecoUI_PIPO_green_13
       rect:
         serializedVersion: 2
-        x: 343
+        x: 344
         y: 460
         width: 226
         height: 117
@@ -376,7 +376,7 @@ TextureImporter:
         height: 172
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 19, y: 18, z: 19, w: 18}
       outline: []
       physicsShape: []
       tessellationDetail: 0
