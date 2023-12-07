@@ -7,6 +7,7 @@ public class UI : MonoBehaviour {
   [SerializeField] private GameObject optionsUI;
 
 
+  public UI_SkillToolTip skillToolTip;
   public UI_ItemToolTip itemToolTip;
   public UI_StatToolTip statToolTip;
   public UI_CraftWindow craftWindow;
@@ -22,19 +23,19 @@ public class UI : MonoBehaviour {
 
   // Update is called once per frame
   void Update() {
-    if(Input.GetKeyDown(KeyCode.C)){
+    if (Input.GetKeyDown(KeyCode.C)) {
       SwitchWithKeyTo(characterUI);
     }
 
-    if(Input.GetKeyDown(KeyCode.B)){
+    if (Input.GetKeyDown(KeyCode.B)) {
       SwitchWithKeyTo(craftUI);
     }
 
-    if(Input.GetKeyDown(KeyCode.K)){
+    if (Input.GetKeyDown(KeyCode.K)) {
       SwitchWithKeyTo(skillTreeUI);
     }
 
-    if(Input.GetKeyDown(KeyCode.O)){
+    if (Input.GetKeyDown(KeyCode.O)) {
       SwitchWithKeyTo(optionsUI);
     }
   }
@@ -48,7 +49,7 @@ public class UI : MonoBehaviour {
   }
 
   public void SwitchWithKeyTo(GameObject _menu) {
-    if(_menu != null && _menu.activeSelf){
+    if (_menu != null && _menu.activeSelf) {
       _menu.SetActive(false);
       return;
     }
