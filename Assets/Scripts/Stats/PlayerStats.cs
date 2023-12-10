@@ -1,3 +1,6 @@
+using System.Collections;
+using UnityEngine;
+
 public class PlayerStats : CharacterStats {
 
   private Player player;
@@ -26,5 +29,10 @@ public class PlayerStats : CharacterStats {
     ItemData_Equipment currentAmor = Inventory.instance.GetEquipment(EquipmentType.Armor);
 
     currentAmor?.Effect(player.transform);
+  }
+
+  public override void OnEvasion() {
+
+    player.skill.dodge.CreateMirageOnDodge();
   }
 }
