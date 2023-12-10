@@ -51,8 +51,6 @@ public class Crystal_Skill : Skill {
         currentCrystal.GetComponent<Crystal_Skill_Controller>()?.FinishCrystal();
 
       }
-
-
     }
   }
 
