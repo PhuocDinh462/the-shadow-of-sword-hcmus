@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class playerCounterAttackState : PlayerState {
+public class PlayerCounterAttackState : PlayerState {
 
   private bool canCreateClone;
 
-  public playerCounterAttackState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName) {
+  public PlayerCounterAttackState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName) {
   }
 
   public override void Enter() {
@@ -32,9 +32,11 @@ public class playerCounterAttackState : PlayerState {
           stateTimer = 10;
           player.anim.SetBool("SuccessfulCounterAttack", true);
 
+          player.skill.parry.UseSkill(); // goint to use to restore health on parry
+
           if (canCreateClone) {
             canCreateClone = false;
-            player.skill.clone.CreateCloneOnCounterAttack(hit.transform);
+            player.skill.parry.MakeMirageOnParry(hit.transform);
           }
         }
       }
