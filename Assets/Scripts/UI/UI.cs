@@ -12,7 +12,10 @@ public class UI : MonoBehaviour {
   public UI_StatToolTip statToolTip;
   public UI_CraftWindow craftWindow;
 
+  private void Awake() {
 
+    SwitchTo(skillTreeUI); // we need this to assign events on skill tree slots before we assign events on skill scripts
+  }
 
   // Start is called before the first frame update
   void Start() {
