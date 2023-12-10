@@ -17,9 +17,10 @@ MonoBehaviour:
   itemIcon: {fileID: 957708663, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
   dropChance: 0
   equipmentType: 1
-  itemCoolDown: 0
+  itemCooldown: 0
   itemEffects:
   - {fileID: 11400000, guid: 360ae90275e737b4a809b752802800de, type: 2}
+  itemEffectDescription: 'Unique : Increase  evision on each taken hit.'
   strength: 0
   agility: 5
   intelligence: 0

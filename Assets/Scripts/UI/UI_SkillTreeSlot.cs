@@ -8,6 +8,8 @@ public class UI_SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IPointerExi
 {
     private UI ui;
     private Image skillImage;
+
+    [SerializeField] private int skillPrice;
     [SerializeField] private string skillName;
     [TextArea]
     [SerializeField] private string skillDescription;
@@ -20,59 +22,64 @@ public class UI_SkillTreeSlot : MonoBehaviour, IPointerEnterHandler, IPointerExi
         gameObject.name = "SkillTreeSlot_UI - " + skillName;
     }
 
-    private void Start(){
+    private void Awake() {
+    
+        GetComponent<Button>().onClick.AddListener(() => UnlockSkillSlot());
+    }
+
+  private void Start(){
         skillImage = GetComponent<Image>();
         ui = GetComponentInParent<UI>();
 
         skillImage.color = lockedSkillColor;
 
-        GetComponent<Button>().onClick.AddListener(() => UnlockSkillSlot());
     }
 
-    public void UnlockSkillSlot(){
-        for (int i = 0; i < shouldBeUnlocked.Length; i++)
-        {
-            if(shouldBeUnlocked[i].unlocked == false){
-                Debug.Log("Cannot unlock skill");
-                return;
-            }
-        }
+  public void UnlockSkillSlot() {
 
-        for (int i = 0; i < shouldBeLocked.LongLength; i++)
-        {
-            if(shouldBeLocked[i].unlocked == true){
-                Debug.Log("Cannot unlock skill");
-                return;
-            }
-        }
-        unlocked = true;
-        skillImage.color = Color.white;
+    if (!PlayerManager.instance.HaveEnoughMoney(skillPrice)) return;
+
+    for (int i = 0; i < shouldBeUnlocked.Length; i++) {
+      if (shouldBeUnlocked[i].unlocked == false) {
+        Debug.Log("Cannot unlock skill");
+        return;
+      }
     }
 
-
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        ui.skillToolTip.ShowToolTip(skillDescription,skillName);
-
-        Vector2 mousePosition = Input.mousePosition;
-
-        float xOffset = 0;
-        float yOffset = 0;
-        if(mousePosition.x > 600){
-            xOffset = -150;
-        }else{
-            xOffset = 150;
-        }
-
-        if(mousePosition.y > 320){
-            yOffset = -150;
-        }else{
-            yOffset = 150;
-        }
-        ui.skillToolTip.transform.position = new Vector2(mousePosition.x + xOffset,mousePosition.y + yOffset);
+    for (int i = 0; i < shouldBeLocked.LongLength; i++) {
+      if (shouldBeLocked[i].unlocked == true) {
+        Debug.Log("Cannot unlock skill");
+        return;
+      }
     }
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        ui.skillToolTip.HideToolTip();
+    unlocked = true;
+    skillImage.color = Color.white;
+  }
+
+
+  public void OnPointerEnter(PointerEventData eventData) {
+    ui.skillToolTip.ShowToolTip(skillDescription, skillName);
+
+    Vector2 mousePosition = Input.mousePosition;
+
+    float xOffset = 0;
+    float yOffset = 0;
+    if (mousePosition.x > 600) {
+      xOffset = -150;
     }
+    else {
+      xOffset = 150;
+    }
+
+    if (mousePosition.y > 320) {
+      yOffset = -150;
+    }
+    else {
+      yOffset = 150;
+    }
+    ui.skillToolTip.transform.position = new Vector2(mousePosition.x + xOffset, mousePosition.y + yOffset);
+  }
+  public void OnPointerExit(PointerEventData eventData) {
+    ui.skillToolTip.HideToolTip();
+  }
 }

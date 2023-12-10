@@ -126,7 +126,7 @@ public class Player : Entity {
   public void AnimationTrigger() => stateMachine.currentState.AnimationFinishTrigger();
 
   private void CheckForDashInput() {
-    if (isWallDetected())
+    if (isWallDetected() || !skill.dash.dashUnlocked)
       return;
 
     if (Input.GetKeyDown(KeyCode.LeftShift) && SkillManager.instance.dash.CanUseSkill()) {
