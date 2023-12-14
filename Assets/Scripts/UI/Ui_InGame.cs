@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.UI;
@@ -16,6 +17,9 @@ public class Ui_InGame : MonoBehaviour
   [SerializeField] private Image blackHoleImage;
   [SerializeField] private Image flaskImage;
 
+  [SerializeField] private TextMeshProUGUI currentSouls;
+  
+
 
   private SkillManager skills;
 
@@ -27,6 +31,9 @@ public class Ui_InGame : MonoBehaviour
   }
 
   private void Update() {
+
+    currentSouls.text = PlayerManager.instance.GetCurrency().ToString("#,#");
+
     if (Input.GetKeyDown(KeyCode.LeftShift) && skills.dash.dashUnlocked) {
       SetCoolDownOf(dashImage);
     }
