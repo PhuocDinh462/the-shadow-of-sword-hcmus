@@ -27,22 +27,22 @@ public class Ui_InGame : MonoBehaviour
   }
 
   private void Update() {
-    if (Input.GetKeyDown(KeyCode.LeftShift)) {
+    if (Input.GetKeyDown(KeyCode.LeftShift) && skills.dash.dashUnlocked) {
       SetCoolDownOf(dashImage);
     }
-    if (Input.GetKeyDown(KeyCode.Q)) {
+    if (Input.GetKeyDown(KeyCode.Q) && skills.parry.parryUnlocked) {
       SetCoolDownOf(parryImage);
     }
-    if (Input.GetKeyDown(KeyCode.F)) {
+    if (Input.GetKeyDown(KeyCode.F) && skills.crystal.crystalUnlocked) {
       SetCoolDownOf(crystalImage);
     }
-    if (Input.GetKeyDown(KeyCode.Mouse1)) {
+    if (Input.GetKeyDown(KeyCode.Mouse1) && skills.sword.swordUnlocked) {
       SetCoolDownOf(swordImage);
     }
-    if (Input.GetKeyDown(KeyCode.R)) {
+    if (Input.GetKeyDown(KeyCode.R) && skills.blackhole.blackholeUnlocked) {
       SetCoolDownOf(blackHoleImage);
     }
-    if (Input.GetKeyDown(KeyCode.Alpha1)) {
+    if (Input.GetKeyDown(KeyCode.Alpha1) && Inventory.instance.GetEquipment(EquipmentType.Flask) != null) {
       SetCoolDownOf(flaskImage);
     }
 
@@ -51,6 +51,7 @@ public class Ui_InGame : MonoBehaviour
     CheckCoolDownOf(crystalImage, skills.crystal.cooldown);
     CheckCoolDownOf(swordImage, skills.sword.cooldown);
     CheckCoolDownOf(blackHoleImage, skills.blackhole.cooldown);
+
     CheckCoolDownOf(flaskImage, Inventory.instance.flaskCooldown);
   }
 
