@@ -56,9 +56,7 @@ public class UI_ItemSlot : MonoBehaviour, IPointerDownHandler, IPointerEnterHand
   public void OnPointerEnter(PointerEventData eventData) {
     if (item == null) return;
 
-
     ui.itemToolTip.ShowToolTip(item.data as ItemData_Equipment);
-    
   }
 
   public void OnPointerExit(PointerEventData eventData) {
