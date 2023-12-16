@@ -18021,8 +18021,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1681119919}
   - {fileID: 1590020179}
+  - {fileID: 1681119919}
   - {fileID: 2078891618}
   m_Father: {fileID: 2066624859}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23212,7 +23212,7 @@ MonoBehaviour:
   xLimit: 960
   yLimit: 540
   xOffset: 150
-  yOffset: 150
+  yOffset: 350
   itemNameText: {fileID: 1248279669}
   itemTypeText: {fileID: 44084821}
   itemDescription: {fileID: 587590401}
@@ -27413,13 +27413,13 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
+  m_TextStyleHashCode: 2193
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 34
-  m_fontSizeBase: 34
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -27454,7 +27454,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -75.51601, y: 0, z: -76.82779, w: -15.119175}
+  m_margin: {x: 15, y: 30, z: 15, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -27482,11 +27482,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1073842949}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -35.50003}
+  m_SizeDelta: {x: 0, y: 71}
+  m_Pivot: {x: 0.5, y: 0.4999997}
 --- !u!1001 &1619197361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28175,6 +28175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: data.lofidev
+  encryptData: 1
 --- !u!4 &1669964007
 Transform:
   m_ObjectHideFlags: 0
@@ -33996,7 +33997,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 61.251926, z: 0, w: 81.682785}
+  m_margin: {x: 15, y: 61.251926, z: 15, w: 81.682785}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -34094,7 +34095,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLimit: 960
   yLimit: 540
-  xOffset: 250
+  xOffset: 400
   yOffset: 100
   description: {fileID: 1949066434}
 --- !u!225 &1695031308
@@ -38249,6 +38250,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f7b77c09d852631408697a2599e14791, type: 2}
   - {fileID: 11400000, guid: e49dcca494dd95f4c90cf3556ab17bff, type: 2}
   - {fileID: 11400000, guid: b1d53f2c4d3259f48bd59d016c4edddc, type: 2}
+  - {fileID: 11400000, guid: 5d6706a9e669cf14ebb7b80edb392655, type: 2}
+  - {fileID: 11400000, guid: fcf5775a386514d40bebfcdd1770ce74, type: 2}
+  - {fileID: 11400000, guid: a56711074192a4d4c9f0f9a9180bfe58, type: 2}
+  - {fileID: 11400000, guid: 9a8bc3910fdc88e4bb493a2305ad9082, type: 2}
+  - {fileID: 11400000, guid: 56ab6651176a7ed40b35b05946884402, type: 2}
   equipment:
   - data: {fileID: 0}
     stackSize: 0
@@ -39525,7 +39531,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
+  m_TextStyleHashCode: 2192
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
