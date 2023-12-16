@@ -64,8 +64,10 @@ public class UI : MonoBehaviour, ISaveManager {
         transform.GetChild(i).gameObject.SetActive(false);
     }
 
-    if (_menu)
+    if (_menu) {
+      AudioManager.instance.PlaySFX(7);
       _menu.SetActive(true);
+    }
   }
 
 
