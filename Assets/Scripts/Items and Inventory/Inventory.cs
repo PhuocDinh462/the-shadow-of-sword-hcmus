@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using UnityEditorInternal.Profiling.Memory.Experimental;
 
 public class Inventory : MonoBehaviour, ISaveManager {
   public static Inventory instance;

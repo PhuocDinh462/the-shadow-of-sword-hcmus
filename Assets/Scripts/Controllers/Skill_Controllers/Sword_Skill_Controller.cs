@@ -192,10 +192,10 @@ public class Sword_Skill_Controller : MonoBehaviour {
     if (player.skill.sword.timeStopUnlocked)
       enemy.FreezeTimeFor(freezeTimeDuration);
 
-    if (player.skill.sword.vulnurableUnlocked)
+    if (player.skill.sword.vulnerableUnlocked)
       enemyStats.MakeVulnerableFor(freezeTimeDuration);
 
-      ItemData_Equipment equipedAmulet = Inventory.instance.GetEquipment(EquipmentType.Amulet);
+    ItemData_Equipment equipedAmulet = Inventory.instance.GetEquipment(EquipmentType.Amulet);
 
     if (equipedAmulet != null)
       equipedAmulet.Effect(enemy.transform);

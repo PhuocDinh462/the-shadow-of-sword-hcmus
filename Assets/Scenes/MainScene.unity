@@ -9337,8 +9337,8 @@ MonoBehaviour:
   cloneAttackUnlockButton: {fileID: 1786964483}
   cloneAttackMultiplier: 0.3
   canAttack: 1
-  aggresiveCloneUnlockButton: {fileID: 479881330}
-  aggresiveCloneAttackMultiplier: 0.8
+  aggressiveCloneUnlockButton: {fileID: 479881330}
+  aggressiveCloneAttackMultiplier: 0
   multipleUnlockButton: {fileID: 115097684}
   multiCloneAttackMultiplier: 0.3
   canDuplicateClone: 1
@@ -9378,7 +9378,7 @@ MonoBehaviour:
   freezeTimeDuration: 1.5
   returnSpeed: 15
   timeStopUnlockButton: {fileID: 947102645}
-  vulnurableUnlockButton: {fileID: 632103866}
+  vulnerableUnlockButton: {fileID: 632103866}
   numberOfDots: 20
   spaceBetweenDots: 0.07
   dotPrefab: {fileID: 8310804124978282290, guid: 3504f46f9ac2a974c81debe31bf7dd65, type: 3}
@@ -38320,6 +38320,7 @@ MonoBehaviour:
   equipmentSlotParent: {fileID: 679987983}
   statSlotParent: {fileID: 35838234}
   loadedItems: []
+  loadedEquipment: []
 --- !u!4 &1964031852
 Transform:
   m_ObjectHideFlags: 0

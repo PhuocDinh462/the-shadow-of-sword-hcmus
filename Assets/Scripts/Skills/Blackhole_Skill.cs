@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class Blackhole_Skill : Skill {
 
   [SerializeField] private UI_SkillTreeSlot blackholeUnlockButton;
-  public bool blackholeUnlocked {  get; private set; }
+  public bool blackholeUnlocked { get; private set; }
 
   [SerializeField] private int amountOfAttacks;
   [SerializeField] private float cloneCooldown;
@@ -62,5 +62,12 @@ public class Blackhole_Skill : Skill {
 
   public float GetBlackHoleRadius() {
     return maxSize / 2;
+  }
+
+
+  protected override void CheckUnlock() {
+    base.CheckUnlock();
+
+    UnlockBlackhole();
   }
 }

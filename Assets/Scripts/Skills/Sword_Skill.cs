@@ -42,8 +42,8 @@ public class Sword_Skill : Skill {
   [Header("Passive skills")]
   [SerializeField] private UI_SkillTreeSlot timeStopUnlockButton;
   public bool timeStopUnlocked { get; private set; }
-  [SerializeField] private UI_SkillTreeSlot vulnurableUnlockButton;
-  public bool vulnurableUnlocked { get; private set; }
+  [SerializeField] private UI_SkillTreeSlot vulnerableUnlockButton;
+  public bool vulnerableUnlocked { get; private set; }
 
   private Vector2 finalDir;
 
@@ -66,7 +66,7 @@ public class Sword_Skill : Skill {
     pierceUnlockButton.GetComponent<Button>().onClick.AddListener(UnlockPierceSword);
     spinUnlockButton.GetComponent<Button>().onClick.AddListener(UnlockSpinSword);
     timeStopUnlockButton.GetComponent<Button>().onClick.AddListener(UnlockTimeStop);
-    vulnurableUnlockButton.GetComponent<Button>().onClick.AddListener(UnlockVulnurable);
+    vulnerableUnlockButton.GetComponent<Button>().onClick.AddListener(UnlockVulnerable);
   }
 
   private void SetupGravity() {
@@ -115,6 +115,14 @@ public class Sword_Skill : Skill {
   }
 
   #region Unlock region
+  protected override void CheckUnlock() {
+    UnlockSword();
+    UnlockBounceSword();
+    UnlockSpinSword();
+    UnlockPierceSword();
+    UnlockTimeStop();
+    UnlockVulnerable();
+  }
 
   private void UnlockTimeStop() {
 
@@ -122,10 +130,10 @@ public class Sword_Skill : Skill {
       timeStopUnlocked = true;
   }
 
-  private void UnlockVulnurable() {
+  private void UnlockVulnerable() {
 
-    if (vulnurableUnlockButton.unlocked)
-      vulnurableUnlocked = true;
+    if (vulnerableUnlockButton.unlocked)
+      vulnerableUnlocked = true;
   }
 
   private void UnlockSword() {

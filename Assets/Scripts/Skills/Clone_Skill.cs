@@ -15,10 +15,10 @@ public class Clone_Skill : Skill {
   [SerializeField] private float cloneAttackMultiplier;
   [SerializeField] private bool canAttack;
 
-  [Header("Aggresive clone")]
-  [SerializeField] private UI_SkillTreeSlot aggresiveCloneUnlockButton;
-  [SerializeField] private float aggresiveCloneAttackMultiplier;
-  public bool canApplyOnHitEffect {  get; private set; }
+  [Header("Aggressive clone")]
+  [SerializeField] private UI_SkillTreeSlot aggressiveCloneUnlockButton;
+  [SerializeField] private float aggressiveCloneAttackMultiplier;
+  public bool canApplyOnHitEffect { get; private set; }
 
   [Header("Multiple clone")]
   [SerializeField] private UI_SkillTreeSlot multipleUnlockButton;
@@ -34,28 +34,34 @@ public class Clone_Skill : Skill {
     base.Start();
 
     cloneAttackUnlockButton.GetComponent<Button>().onClick.AddListener(UnlockCloneAttack);
-    aggresiveCloneUnlockButton.GetComponent<Button>().onClick.AddListener(UnlockAggresiveClone);
+    aggressiveCloneUnlockButton.GetComponent<Button>().onClick.AddListener(UnlockAggressiveClone);
     multipleUnlockButton.GetComponent<Button>().onClick.AddListener(UnlockMultiClone);
     crystalInsteadUnlockButton.GetComponent<Button>().onClick.AddListener(UnlockCrystalInstead);
   }
 
   #region Unlock region
+  protected override void CheckUnlock() {
+    UnlockCloneAttack();
+    UnlockAggressiveClone();
+    UnlockMultiClone();
+    UnlockCrystalInstead();
+  }
 
   private void UnlockCloneAttack() {
-    
-    if(cloneAttackUnlockButton.unlocked) {
+
+    if (cloneAttackUnlockButton.unlocked) {
 
       canAttack = true;
       attackMultiplier = cloneAttackMultiplier;
     }
   }
 
-  private void UnlockAggresiveClone() {
+  private void UnlockAggressiveClone() {
 
-    if (aggresiveCloneUnlockButton.unlocked) {
+    if (aggressiveCloneUnlockButton.unlocked) {
 
       canApplyOnHitEffect = true;
-      attackMultiplier = aggresiveCloneAttackMultiplier;
+      attackMultiplier = aggressiveCloneAttackMultiplier;
     }
   }
 
@@ -95,11 +101,11 @@ public class Clone_Skill : Skill {
 
   public void CreateCloneWithDelay(Transform _enemyTransform) {
 
-      StartCoroutine(CloneDelayCorotine(_enemyTransform, new Vector3(2 * player.facingDir, 0)));
+    StartCoroutine(CloneDelayCoroutine(_enemyTransform, new Vector3(2 * player.facingDir, 0)));
   }
 
 
-  private IEnumerator CloneDelayCorotine(Transform _transform, Vector3 _offset) {
+  private IEnumerator CloneDelayCoroutine(Transform _transform, Vector3 _offset) {
     yield return new WaitForSeconds(.4f);
     CreateClone(_transform, _offset);
   }
