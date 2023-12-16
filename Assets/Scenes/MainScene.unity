@@ -9443,6 +9443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 2
+  cooldownTimer: 0
   dashUnlockButton: {fileID: 1163874948}
   cloneOnDashUnlockButton: {fileID: 1113235082}
   cloneOnArrivalUnlockButton: {fileID: 1128319512}
@@ -9459,6 +9460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 0
+  cooldownTimer: 0
   attackMultiplier: 0
   clonePrefab: {fileID: 2479243650550556485, guid: 119e3e2b317d3a4419029a392977f7f8, type: 3}
   cloneDuration: 1.5
@@ -9486,6 +9488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 3
+  cooldownTimer: 0
   swordType: 2
   bounceUnlockButton: {fileID: 553387256}
   bounceAmount: 4
@@ -9524,6 +9527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 60
+  cooldownTimer: 0
   blackholeUnlockButton: {fileID: 1580764319}
   amountOfAttacks: 15
   cloneCooldown: 0.35
@@ -9545,6 +9549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 3
+  cooldownTimer: 0
   crystalDuration: 1.5
   crystalPrefab: {fileID: 8355737336378194048, guid: 8148c0f4b71b92f4bac3adcb93e2b9bf, type: 3}
   unlockCloneInsteadButton: {fileID: 1703256551}
@@ -9577,6 +9582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 2
+  cooldownTimer: 0
   parryUnlockButton: {fileID: 745897704}
   restoreUnlockButton: {fileID: 1844760381}
   restoreHealthPercentage: 0.05
@@ -9594,6 +9600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 0
+  cooldownTimer: 0
   unlockDodgeButton: {fileID: 1279872927}
   evasionAmount: 10
   unlockMirageDodge: {fileID: 152839379}
@@ -38857,7 +38864,7 @@ MonoBehaviour:
   - {x: 4, y: 1.5}
   counterAttackDuration: 0.2
   moveSpeed: 9
-  jumpForce: 14
+  jumpForce: 15
   swordReturnImpact: 7
   dashSpeed: 25
   dashDuration: 0.2
