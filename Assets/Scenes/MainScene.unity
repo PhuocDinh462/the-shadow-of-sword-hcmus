@@ -23444,7 +23444,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8b9866cba4f8f7f4da92d417c1488589, type: 2}
   - {fileID: 11400000, guid: 51a4ffa262b82c2439d23f1e386ad9ec, type: 2}
   - {fileID: 11400000, guid: f7b77c09d852631408697a2599e14791, type: 2}
-  dropFrefab: {fileID: 3210127014373011679, guid: 00c1840ca9e8c0949af0844c807ea364, type: 3}
+  dropPrefab: {fileID: 3210127014373011679, guid: 00c1840ca9e8c0949af0844c807ea364, type: 3}
 --- !u!114 &1362077351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23892,7 +23892,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8b9866cba4f8f7f4da92d417c1488589, type: 2}
   - {fileID: 11400000, guid: 51a4ffa262b82c2439d23f1e386ad9ec, type: 2}
   - {fileID: 11400000, guid: f7b77c09d852631408697a2599e14791, type: 2}
-  dropFrefab: {fileID: 3210127014373011679, guid: 00c1840ca9e8c0949af0844c807ea364, type: 3}
+  dropPrefab: {fileID: 3210127014373011679, guid: 00c1840ca9e8c0949af0844c807ea364, type: 3}
 --- !u!1 &1371518083
 GameObject:
   m_ObjectHideFlags: 0
@@ -35225,7 +35225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   possibleItemDrop: 0
   possibleDrop: []
-  dropFrefab: {fileID: 3210127014373011679, guid: 00c1840ca9e8c0949af0844c807ea364, type: 3}
+  dropPrefab: {fileID: 0}
   chanceToLooseItems: 20
   chanceToLooseMaterials: 75
 --- !u!1 &1775464770
@@ -38310,12 +38310,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f7b77c09d852631408697a2599e14791, type: 2}
   - {fileID: 11400000, guid: e49dcca494dd95f4c90cf3556ab17bff, type: 2}
   - {fileID: 11400000, guid: b1d53f2c4d3259f48bd59d016c4edddc, type: 2}
-  - {fileID: 11400000, guid: 5d6706a9e669cf14ebb7b80edb392655, type: 2}
-  - {fileID: 11400000, guid: 56ab6651176a7ed40b35b05946884402, type: 2}
-  - {fileID: 11400000, guid: 70008df554fb18445b22d08c42bd5d00, type: 2}
-  - {fileID: 11400000, guid: a56711074192a4d4c9f0f9a9180bfe58, type: 2}
-  - {fileID: 11400000, guid: 505a403de457efa44a3090fda4d9d483, type: 2}
-  - {fileID: 11400000, guid: cb5690f5b45d1a242b3f97cb25cb8e6b, type: 2}
   equipment:
   - data: {fileID: 0}
     stackSize: 0
@@ -38325,6 +38319,7 @@ MonoBehaviour:
   stashSlotParent: {fileID: 587389730}
   equipmentSlotParent: {fileID: 679987983}
   statSlotParent: {fileID: 35838234}
+  loadedItems: []
 --- !u!4 &1964031852
 Transform:
   m_ObjectHideFlags: 0

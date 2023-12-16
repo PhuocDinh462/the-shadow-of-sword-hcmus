@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Dodge_Skill : Skill
-{
+public class Dodge_Skill : Skill {
 
   [Header("Dodge")]
   [SerializeField] private UI_SkillTreeSlot unlockDodgeButton;

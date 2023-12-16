@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class UI_Tooltip : MonoBehaviour
-{
+public class UI_Tooltip : MonoBehaviour {
   [SerializeField] private float xLimit = 960;
   [SerializeField] private float yLimit = 540;
 

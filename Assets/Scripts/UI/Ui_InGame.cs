@@ -1,12 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Playables;
 using UnityEngine.UI;
 
-public class Ui_InGame : MonoBehaviour
-{
+public class Ui_InGame : MonoBehaviour {
   [SerializeField] private PlayerStats playerStats;
   [SerializeField] private Slider slider;
 
@@ -18,15 +14,15 @@ public class Ui_InGame : MonoBehaviour
   [SerializeField] private Image flaskImage;
 
   [SerializeField] private TextMeshProUGUI currentSouls;
-  
+
 
 
   private SkillManager skills;
 
   void Start() {
-      if(playerStats != null) {
-        playerStats.onHealthChanged += UpdateHealthUI;
-      }
+    if (playerStats != null) {
+      playerStats.onHealthChanged += UpdateHealthUI;
+    }
     skills = SkillManager.instance;
   }
 

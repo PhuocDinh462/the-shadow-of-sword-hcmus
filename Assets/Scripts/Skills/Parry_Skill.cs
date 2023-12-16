@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Parry_Skill : Skill
-{
+public class Parry_Skill : Skill {
 
   [Header("Parry")]
   [SerializeField] private UI_SkillTreeSlot parryUnlockButton;

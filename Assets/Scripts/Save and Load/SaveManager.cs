@@ -1,10 +1,8 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class SaveManager : MonoBehaviour
-{
+public class SaveManager : MonoBehaviour {
   public static SaveManager instance;
 
   [SerializeField] private string fileName;
@@ -35,24 +33,24 @@ public class SaveManager : MonoBehaviour
   public void NewGame() {
     gameData = new GameData();
   }
-                                                                               
+
   public void LoadGame() {
 
     gameData = dataHandler.Load();
 
-    if(this.gameData == null) {
+    if (this.gameData == null) {
       Debug.Log("No save data found!");
       NewGame();
     }
 
-    foreach(ISaveManager saveManager in  saveManagers) {
+    foreach (ISaveManager saveManager in saveManagers) {
       saveManager.LoadData(gameData);
     }
 
   }
 
-  public void SaveGame() {                                            
-    foreach(ISaveManager saveManager in saveManagers) {
+  public void SaveGame() {
+    foreach (ISaveManager saveManager in saveManagers) {
       saveManager.SaveData(ref gameData);
     }
 

@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class PlayerStats : CharacterStats {
@@ -42,7 +41,7 @@ public class PlayerStats : CharacterStats {
 
     int totalDamage = damage.GetValue() + strength.GetValue();
 
-    if(_multiplier > 0)
+    if (_multiplier > 0)
       totalDamage = Mathf.RoundToInt(totalDamage * _multiplier);
 
     if (CanCrit()) {
