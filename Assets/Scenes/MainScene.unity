@@ -37916,6 +37916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e1a538a15e237458b1e44ddee69ada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sfxMinimumDistance: 10
   sfx:
   - {fileID: 1954525933}
   - {fileID: 417003506}
