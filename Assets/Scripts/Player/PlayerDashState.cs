@@ -9,15 +9,19 @@ public class PlayerDashState : PlayerState {
 
     stateTimer = player.dashDuration;
 
+    player.stats.MakeInvincible(true);
+
     AudioManager.instance.PlaySFX(17);
   }
 
   public override void Exit() {
 
+    base.Exit();
     player.skill.dash.CloneOnArrival();
 
-    base.Exit();
     player.SetVelocity(0, rb.velocity.y);
+    player.stats.MakeInvincible(false);
+
   }
 
   public override void Update() {

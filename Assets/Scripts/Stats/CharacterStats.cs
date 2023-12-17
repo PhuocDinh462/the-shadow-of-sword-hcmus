@@ -65,6 +65,7 @@ public class CharacterStats : MonoBehaviour {
 
   public System.Action onHealthChanged;
   public bool isDead { get; private set; }
+  public bool isInvincible { get; private set; }
   private bool isVulnerable;
 
   protected virtual void Start() {
@@ -95,10 +96,10 @@ public class CharacterStats : MonoBehaviour {
   }
 
   public void MakeVulnerableFor(float _duration) => StartCoroutine(VulnerableForCorotine(_duration));
-  
+
 
   private IEnumerator VulnerableForCorotine(float _duration) {
-   
+
     isVulnerable = true;
 
     yield return new WaitForSeconds(_duration);
@@ -278,6 +279,8 @@ public class CharacterStats : MonoBehaviour {
 
 
   public virtual void TakeDamage(int _damage) {
+    if (isInvincible) return;
+
     DecreaseHealthBy(_damage);
 
     GetComponent<Entity>().DamageImpact();
@@ -340,6 +343,9 @@ public class CharacterStats : MonoBehaviour {
     return totalMagicalDamage;
   }
 
+  public void MakeInvincible(bool _invincible) {
+    isInvincible = _invincible;
+  }
   public virtual void OnEvasion() {
 
   }
