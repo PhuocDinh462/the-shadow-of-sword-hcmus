@@ -33725,7 +33725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackPower: {x: 0, y: 0}
-  knockBackDuration: 0
+  knockBackDuration: 0.3
   attackCheck: {fileID: 237578085}
   attackCheckRadius: 0.8
   groundCheck: {fileID: 1315615868}
@@ -33876,7 +33876,7 @@ MonoBehaviour:
     baseValue: 10
     modifiers: 
   damage:
-    baseValue: 20
+    baseValue: 100
     modifiers: 
   critChance:
     baseValue: 0
@@ -39746,12 +39746,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8424570198178414880, guid: c21494f95f505454cb68c9efd9fad0bb, type: 3}
-      propertyPath: knockbackPower.x
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8424570198178414880, guid: c21494f95f505454cb68c9efd9fad0bb, type: 3}
-      propertyPath: knockbackPower.y
-      value: 12
+      propertyPath: attackDistance
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -1,40 +1,36 @@
 using UnityEngine;
 
-public class SkeletonBattleState : EnemyState
-{
+public class SkeletonBattleState : EnemyState {
   private Transform player;
   private Enemy_Skeleton enemy;
   private int moveDir;
 
-  public SkeletonBattleState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBooleanName, Enemy_Skeleton _enemy) : base(_enemy, _stateMachine, _animBooleanName)
-  {
+  public SkeletonBattleState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBooleanName, Enemy_Skeleton _enemy) : base(_enemy, _stateMachine, _animBooleanName) {
     this.enemy = _enemy;
   }
 
-  public override void Enter()
-  {
+  public override void Enter() {
     base.Enter();
 
     player = PlayerManager.instance.player.transform;
+    if (player.GetComponent<PlayerStats>().isDead) {
+      stateMachine.ChangeState(enemy.moveState);
+    }
   }
 
-  public override void Update()
-  {
+  public override void Update() {
     base.Update();
 
-    if (enemy.IsPlayerDetected())
-    {
+    if (enemy.IsPlayerDetected()) {
       stateTimer = enemy.battleTime;
 
-      if (enemy.IsPlayerDetected().distance < enemy.attackDistance)
-      {
+      if (enemy.IsPlayerDetected().distance < enemy.attackDistance) {
         if (CanAttack())
           stateMachine.ChangeState(enemy.attackState);
       }
     }
 
-    else
-    {
+    else {
       if (stateTimer < 0 || Vector2.Distance(player.transform.position, enemy.transform.position) > 10)
         stateMachine.ChangeState(enemy.idleState);
     }
@@ -47,15 +43,13 @@ public class SkeletonBattleState : EnemyState
     enemy.SetVelocity(enemy.moveSpeed * moveDir, rb.velocity.y);
   }
 
-  public override void Exit()
-  {
+  public override void Exit() {
     base.Exit();
   }
 
-  private bool CanAttack()
-  {
-    if (Time.time >= enemy.lastTimeAttacked + enemy.attackCoolDown)
-    {
+  private bool CanAttack() {
+    if (Time.time >= enemy.lastTimeAttacked + enemy.attackCoolDown) {
+      enemy.attackCoolDown = Random.Range(enemy.minAttackCoolDown, enemy.maxAttackCoolDown);
       enemy.lastTimeAttacked = Time.time;
       return true;
     }
