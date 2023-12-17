@@ -427,7 +427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed6e3f0dad2671641a4c2e8c4a2f18ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackPower: {x: 0, y: 0}
+  knockbackPower: {x: 7, y: 12}
   knockBackDuration: 0.07
   attackCheck: {fileID: 1796632250515200509}
   attackCheckRadius: 0.8
@@ -519,10 +519,10 @@ MonoBehaviour:
     baseValue: 0
     modifiers: 
   fireDamage:
-    baseValue: 2
+    baseValue: 0
     modifiers: 
   iceDamage:
-    baseValue: 2
+    baseValue: 0
     modifiers: 
   lightningDamage:
     baseValue: 0

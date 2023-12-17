@@ -30,6 +30,15 @@ public class PlayerStats : CharacterStats {
 
   protected override void DecreaseHealthBy(int _damage) {
     base.DecreaseHealthBy(_damage);
+    if (isDead) return;
+
+    if (_damage > GetMaxHealthValue() * .3f) {
+      // player.SetupKnockbackPower(new Vector2(10, 6));
+
+      int randomSound = Random.Range(34, 35);
+      AudioManager.instance.PlaySFX(randomSound, null);
+      AudioManager.instance.PlaySFX(randomSound, null);
+    }
 
     ItemData_Equipment currentAmor = Inventory.instance.GetEquipment(EquipmentType.Armor);
 
