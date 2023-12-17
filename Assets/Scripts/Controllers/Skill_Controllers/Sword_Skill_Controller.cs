@@ -173,7 +173,6 @@ public class Sword_Skill_Controller : MonoBehaviour {
     if (collision.GetComponent<Enemy>() != null) {
       Enemy enemy = collision.GetComponent<Enemy>();
       SwordSkillDamage(enemy);
-
     }
 
 
@@ -183,8 +182,8 @@ public class Sword_Skill_Controller : MonoBehaviour {
   }
 
   private void SwordSkillDamage(Enemy enemy) {
-
     EnemyStats enemyStats = enemy.GetComponent<EnemyStats>();
+    AudioManager.instance.PlaySFX(1);
 
     //player.stats.DoDamage(enemy.GetComponent<CharacterStats>());
     player.stats.DoDamage(enemyStats);
@@ -195,10 +194,10 @@ public class Sword_Skill_Controller : MonoBehaviour {
     if (player.skill.sword.vulnerableUnlocked)
       enemyStats.MakeVulnerableFor(freezeTimeDuration);
 
-    ItemData_Equipment equipedAmulet = Inventory.instance.GetEquipment(EquipmentType.Amulet);
+    ItemData_Equipment equippedAmulet = Inventory.instance.GetEquipment(EquipmentType.Amulet);
 
-    if (equipedAmulet != null)
-      equipedAmulet.Effect(enemy.transform);
+    if (equippedAmulet != null)
+      equippedAmulet.Effect(enemy.transform);
   }
 
   private void SetupTargetForBounce(Collider2D collision) {

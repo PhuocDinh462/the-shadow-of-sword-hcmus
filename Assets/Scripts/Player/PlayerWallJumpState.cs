@@ -6,6 +6,7 @@ public class PlayerWallJumpState : PlayerState {
     base.Enter();
     stateTimer = .4f;
     player.SetVelocity(-player.facingDir, player.jumpForce);
+    AudioManager.instance.PlaySFX(15);
   }
 
   public override void Exit() {

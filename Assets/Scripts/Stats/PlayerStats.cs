@@ -11,6 +11,9 @@ public class PlayerStats : CharacterStats {
 
   public override void TakeDamage(int _damage) {
     base.TakeDamage(_damage);
+
+    if (currentHealth - _damage > 0)
+      AudioManager.instance.PlaySFX(Random.Range(31, 34));
   }
 
 
@@ -18,6 +21,7 @@ public class PlayerStats : CharacterStats {
     base.Die();
     player.Die();
 
+    AudioManager.instance.PlaySFX(34);
     GameManager.instance.lostCurrencyAmount = PlayerManager.instance.currency;
     PlayerManager.instance.currency = 0;
 

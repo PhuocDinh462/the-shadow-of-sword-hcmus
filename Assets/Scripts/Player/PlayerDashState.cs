@@ -8,6 +8,8 @@ public class PlayerDashState : PlayerState {
     player.skill.dash.CloneOnDash();
 
     stateTimer = player.dashDuration;
+
+    AudioManager.instance.PlaySFX(17);
   }
 
   public override void Exit() {

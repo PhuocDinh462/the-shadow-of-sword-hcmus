@@ -95,7 +95,7 @@ public class Sword_Skill : Skill {
   public void CreateSword() {
     GameObject newSword = Instantiate(swordPrefab, player.transform.position, transform.rotation);
     Sword_Skill_Controller newSwordScript = newSword.GetComponent<Sword_Skill_Controller>();
-
+    AudioManager.instance.PlaySFX(28);
 
     if (swordType == SwordType.Bounce) {
       newSwordScript.SetupBounce(true, bounceAmount, bounceSpeed);

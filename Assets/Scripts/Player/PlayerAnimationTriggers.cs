@@ -8,11 +8,12 @@ public class PlayerAnimationTriggers : MonoBehaviour {
   }
 
   private void AttackTrigger() {
-    AudioManager.instance.PlaySFX(2);
     Collider2D[] colliders = Physics2D.OverlapCircleAll(player.attackCheck.position, player.attackCheckRadius);
+    bool haveEnemies = false;
 
     foreach (var hit in colliders) {
       if (hit.GetComponent<Enemy>() != null) {
+        haveEnemies = true;
         EnemyStats _target = hit.GetComponent<EnemyStats>();
 
         if (_target != null)
@@ -26,6 +27,11 @@ public class PlayerAnimationTriggers : MonoBehaviour {
 
       }
     }
+
+    if (haveEnemies)
+      AudioManager.instance.PlaySFX(0);
+    else
+      AudioManager.instance.PlaySFX(2);
   }
 
   private void ThrowSword() {

@@ -13,7 +13,7 @@ public class IceAndFire_Effect : ItemEffect {
     bool thirdAttack = player.GetComponent<Player>().primaryAttack.comboCounter == 2;
 
     if (thirdAttack) {
-
+      AudioManager.instance.PlaySFX(13);
       GameObject newIceAndFire = Instantiate(iceAndFirePrefab, _respawnPosition.position, player.transform.rotation);
       newIceAndFire.GetComponent<Rigidbody2D>().velocity = new Vector2(xVelocity * player.facingDir, 0);
 

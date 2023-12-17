@@ -21,9 +21,9 @@ public class Parry_Skill : Skill {
     base.UseSkill();
 
     if (restoreUnlocked) {
-
       int restoreAmount = Mathf.RoundToInt(player.stats.GetMaxHealthValue() * restoreHealthPercentage);
       player.stats.IncreaseHealthBy(restoreAmount);
+      AudioManager.instance.PlaySFX(1);
     }
   }
 
