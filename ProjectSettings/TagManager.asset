@@ -15,7 +15,7 @@ TagManager:
   - Enemy
   - Sword
   - Item
-  - 
+  - FX
   - 
   - 
   - 
@@ -58,4 +58,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3888693441
+    locked: 0
+  - name: FX
+    uniqueID: 2120565369
     locked: 0
