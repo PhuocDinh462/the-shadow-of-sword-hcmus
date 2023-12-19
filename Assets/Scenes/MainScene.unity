@@ -53325,6 +53325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfe925f49ae9c0489b0aa1824c84a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popUpTextPrefab: {fileID: 5311715261690838674, guid: 6245f245151884c3ebefe4647f30cc31, type: 3}
   shakeMultiplier: 0.2
   shakeSwordImpact: {x: 1, y: 0, z: 0}
   shakeHighDamage: {x: 1, y: 1, z: 0}
@@ -59305,8 +59306,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2112087576975195070, guid: c21494f95f505454cb68c9efd9fad0bb, type: 3}
+      propertyPath: level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2112087576975195070, guid: c21494f95f505454cb68c9efd9fad0bb, type: 3}
       propertyPath: damage.baseValue
-      value: 50
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2112087576975195070, guid: c21494f95f505454cb68c9efd9fad0bb, type: 3}
       propertyPath: critChance.baseValue
@@ -59324,6 +59329,10 @@ PrefabInstance:
       propertyPath: criticalHitFx
       value: 
       objectReference: {fileID: 1748528559850242689, guid: 003561ca4d6f84a669c032a43a65c437, type: 3}
+    - target: {fileID: 5805187373586074395, guid: c21494f95f505454cb68c9efd9fad0bb, type: 3}
+      propertyPath: popUpTextPrefab
+      value: 
+      objectReference: {fileID: 5311715261690838674, guid: 6245f245151884c3ebefe4647f30cc31, type: 3}
     - target: {fileID: 6214674175989364236, guid: c21494f95f505454cb68c9efd9fad0bb, type: 3}
       propertyPath: m_LocalScale.x
       value: 1

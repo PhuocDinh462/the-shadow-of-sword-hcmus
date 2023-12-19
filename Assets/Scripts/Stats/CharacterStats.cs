@@ -133,7 +133,7 @@ public class CharacterStats : MonoBehaviour {
       totalDamage = CalculateCriticalDamage(totalDamage);
       criticalStrike = true;
     }
-    fx.CreateHitFx(_targetStats.transform,criticalStrike);
+    fx.CreateHitFx(_targetStats.transform, criticalStrike);
 
     totalDamage = CheckTargetArmor(_targetStats, totalDamage);
     _targetStats.TakeDamage(totalDamage);
@@ -310,6 +310,9 @@ public class CharacterStats : MonoBehaviour {
       _damage = Mathf.RoundToInt(_damage * 1.1f);
 
     currentHealth -= _damage;
+    if (_damage > 0) {
+      fx.CreatePopUpText(_damage.ToString());
+    }
     if (onHealthChanged != null) {
       onHealthChanged();
     }

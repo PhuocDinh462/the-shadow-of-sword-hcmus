@@ -15,8 +15,13 @@ public class PlayerGroundedState : PlayerState {
   public override void Update() {
     base.Update();
 
-    if (Input.GetKeyDown(KeyCode.R) && player.skill.blackhole.blackholeUnlocked && player.skill.blackhole.cooldownTimer <= 0)
+    if (Input.GetKeyDown(KeyCode.R) && player.skill.blackhole.blackholeUnlocked && player.skill.blackhole.cooldownTimer <= 0) {
+      if (player.skill.blackhole.cooldownTimer > 0) {
+        player.fx.CreatePopUpText("Cooldown");
+        return;
+      }
       stateMachine.ChangeState(player.blackhole);
+    }
 
     if (Input.GetKeyDown(KeyCode.Mouse1) && HasNoSword() && player.skill.sword.swordUnlocked)
       stateMachine.ChangeState(player.aimSword);
