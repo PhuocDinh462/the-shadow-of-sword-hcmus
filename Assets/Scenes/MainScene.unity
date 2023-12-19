@@ -53185,6 +53185,7 @@ GameObject:
   - component: {fileID: 1761097170}
   - component: {fileID: 1761097171}
   - component: {fileID: 1761097172}
+  - component: {fileID: 1761097173}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -53324,6 +53325,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfe925f49ae9c0489b0aa1824c84a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shakeMultiplier: 0.2
+  shakeSwordImpact: {x: 1, y: 0, z: 0}
+  shakeHighDamage: {x: 1, y: 1, z: 0}
   afterImagePrefab: {fileID: 4870211140174121944, guid: 0c1ec5c3efdb649d28383aa7098eba68, type: 3}
   colorLooseRate: 1
   afterImageCooldown: 0.05
@@ -53378,7 +53382,7 @@ MonoBehaviour:
     baseValue: 0
     modifiers: 
   maxHealth:
-    baseValue: 500
+    baseValue: 100
     modifiers: 
   armor:
     baseValue: 20
@@ -53421,6 +53425,59 @@ MonoBehaviour:
   dropPrefab: {fileID: 3210127014373011679, guid: 00c1840ca9e8c0949af0844c807ea364, type: 3}
   chanceToLooseItems: 20
   chanceToLooseMaterials: 75
+--- !u!114 &1761097173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761097164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ImpulseDefinition:
+    m_ImpulseChannel: 1
+    m_ImpulseShape: 2
+    m_CustomImpulseShape:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_ImpulseDuration: 0.2
+    m_ImpulseType: 0
+    m_DissipationRate: 0.25
+    m_RawSignal: {fileID: 0}
+    m_AmplitudeGain: 1
+    m_FrequencyGain: 1
+    m_RepeatMode: 0
+    m_Randomize: 1
+    m_TimeEnvelope:
+      m_AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_AttackTime: 0
+      m_SustainTime: 0.2
+      m_DecayTime: 0.7
+      m_ScaleWithImpact: 1
+      m_HoldForever: 0
+    m_ImpactRadius: 100
+    m_DirectionMode: 0
+    m_DissipationMode: 2
+    m_DissipationDistance: 100
+    m_PropagationSpeed: 343
+  m_DefaultVelocity: {x: 0, y: 0, z: 0}
 --- !u!1 &1775464770
 GameObject:
   m_ObjectHideFlags: 0
@@ -58595,6 +58652,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2143149628}
   - component: {fileID: 2143149627}
+  - component: {fileID: 2143149629}
   m_Layer: 0
   m_Name: Virtual Camera
   m_TagString: Untagged
@@ -58657,6 +58715,29 @@ Transform:
   - {fileID: 269620363}
   m_Father: {fileID: 2017216328}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2143149629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143149626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ApplyAfter: 2
+  m_ChannelMask: 1
+  m_Gain: 1
+  m_Use2DDistance: 0
+  m_UseCameraSpace: 1
+  m_ReactionSettings:
+    m_SecondaryNoise: {fileID: 0}
+    m_AmplitudeGain: 1
+    m_FrequencyGain: 1
+    m_Duration: 1
+    m_NoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1001 &401102845741154270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59225,7 +59306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2112087576975195070, guid: c21494f95f505454cb68c9efd9fad0bb, type: 3}
       propertyPath: damage.baseValue
-      value: 1
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2112087576975195070, guid: c21494f95f505454cb68c9efd9fad0bb, type: 3}
       propertyPath: critChance.baseValue
