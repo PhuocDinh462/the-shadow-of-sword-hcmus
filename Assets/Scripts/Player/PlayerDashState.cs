@@ -22,6 +22,7 @@ public class PlayerDashState : PlayerState {
     player.SetVelocity(0, rb.velocity.y);
     player.stats.MakeInvincible(false);
 
+
   }
 
   public override void Update() {
@@ -34,5 +35,8 @@ public class PlayerDashState : PlayerState {
 
     if (stateTimer < 0)
       stateMachine.ChangeState(player.idleState);
+
+    player.fx.CreateAfterImage();
+    
   }
 }

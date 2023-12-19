@@ -53324,6 +53324,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfe925f49ae9c0489b0aa1824c84a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  afterImagePrefab: {fileID: 4870211140174121944, guid: 0c1ec5c3efdb649d28383aa7098eba68, type: 3}
+  colorLooseRate: 1
+  afterImageCooldown: 0.05
   flashDuration: 0.2
   hitMat: {fileID: 2100000, guid: dd0ed22d1886cbc4793ad459cbc9d51c, type: 2}
   igniteColor:
