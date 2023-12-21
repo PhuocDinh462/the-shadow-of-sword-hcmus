@@ -19,7 +19,7 @@ public class Enemy_Slime : Enemy {
     moveState = new SlimeMoveState(this, stateMachine, "Move", this);
     battleState = new SlimeBattleState(this, stateMachine, "Move", this);
     attackState = new SlimeAttackState(this, stateMachine, "Attack", this);
-    stunState = new SlimeStunnedState(this, stateMachine, "Stun", this);
+    stunState = new SlimeStunnedState(this, stateMachine, "Stunned", this);
     deadState = new SlimeDeadState(this, stateMachine, "Idle", this);
 
   }
