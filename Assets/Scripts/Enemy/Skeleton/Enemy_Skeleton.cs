@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class Enemy_Skeleton : Enemy {
 
   #region States
@@ -29,14 +30,6 @@ public class Enemy_Skeleton : Enemy {
     stateMachine.Initialize(idleState);
   }
 
-  protected override void Update() {
-    base.Update();
-
-    if (Input.GetKeyDown(KeyCode.U)) {
-      stateMachine.ChangeState(stunState);
-    }
-  }
-
   public override bool CanbeStunned() {
     if (base.CanbeStunned()) {
       stateMachine.ChangeState(stunState);
@@ -45,7 +38,6 @@ public class Enemy_Skeleton : Enemy {
     return false;
 
   }
-
 
   public override void Die() {
     base.Die();
