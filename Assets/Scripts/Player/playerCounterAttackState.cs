@@ -27,10 +27,16 @@ public class PlayerCounterAttackState : PlayerState {
     Collider2D[] colliders = Physics2D.OverlapCircleAll(player.attackCheck.position, player.attackCheckRadius);
 
     foreach (var hit in colliders) {
+
+      if(hit.GetComponent<Arrow_Controller>() != null) {
+
+        hit.GetComponent<Arrow_Controller>().FlipArrow();
+        SuccessfullCounterAttack();
+      }
+
       if (hit.GetComponent<Enemy>() != null) {
         if (hit.GetComponent<Enemy>().CanbeStunned()) {
-          stateTimer = 10;
-          player.anim.SetBool("SuccessfulCounterAttack", true);
+          SuccessfullCounterAttack();
 
           player.skill.parry.UseSkill(); // goint to use to restore health on parry
 
@@ -44,5 +50,10 @@ public class PlayerCounterAttackState : PlayerState {
 
     if (stateTimer < 0 || triggerCalled)
       stateMachine.ChangeState(player.idleState);
+  }
+
+  private void SuccessfullCounterAttack() {
+    stateTimer = 10;
+    player.anim.SetBool("SuccessfulCounterAttack", true);
   }
 }
