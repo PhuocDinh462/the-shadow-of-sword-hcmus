@@ -33,7 +33,7 @@ public class PlayerStats : CharacterStats {
     if (isDead) return;
 
     if (_damage > GetMaxHealthValue() * .3f) {
-      // player.SetupKnockbackPower(new Vector2(10, 6));
+      player.SetupKnockbackPower(new Vector2(10, 6));
 
       player.fx.ScreenShake(player.fx.shakeHighDamage);
 
@@ -42,9 +42,9 @@ public class PlayerStats : CharacterStats {
       AudioManager.instance.PlaySFX(randomSound, null);
     }
 
-    ItemData_Equipment currentAmor = Inventory.instance.GetEquipment(EquipmentType.Armor);
-
-    currentAmor?.Effect(player.transform);
+    ItemData_Equipment currentArmor = Inventory.instance.GetEquipment(EquipmentType.Armor);
+    if (currentArmor != null)
+      currentArmor.Effect(player.transform);
   }
 
   public override void OnEvasion() {

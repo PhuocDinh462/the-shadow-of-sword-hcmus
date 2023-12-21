@@ -70,11 +70,12 @@ public class Entity : MonoBehaviour {
     isKnocked = true;
 
     rb.velocity = new Vector2(knockbackPower.x * knockbackDir, knockbackPower.y);
-
     yield return new WaitForSeconds(knockBackDuration);
 
     isKnocked = false;
     SetupZeroKnockbackPower();
+    rb.velocity = knockbackPower;
+
   }
   protected virtual void SetupZeroKnockbackPower() {
 
