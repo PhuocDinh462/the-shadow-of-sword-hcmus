@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy_AnimationTriggers : MonoBehaviour {
@@ -14,11 +16,13 @@ public class Enemy_AnimationTriggers : MonoBehaviour {
       if (hit.GetComponent<Player>() != null) {
         PlayerStats target = hit.GetComponent<PlayerStats>();
         enemy.stats.DoDamage(target);
-
       }
     }
   }
+  private void SpeicalAttackTrigger() {
+    enemy.AnimationSpecialAttackTrigger();
+  }
 
-  protected void OpenCounterWindow() => enemy.OpenCounterAttackWindow();
-  protected void CloseCounterWindow() => enemy.CloseCounterAttackWindow();
+  private void OpenCounterWindow() => enemy.OpenCounterAttackWindow();
+  private void CloseCounterWindow() => enemy.CloseCounterAttackWindow();
 }

@@ -1,9 +1,10 @@
-using UnityEngine;
+﻿using UnityEngine;
 
-public class SkeletonStunState : EnemyState {
-  private Enemy_Skeleton enemy;
 
-  public SkeletonStunState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, Enemy_Skeleton _enemy) : base(_enemyBase, _stateMachine, _animBoolName) {
+public class ArcherStunnedState : EnemyState {
+  private Enemy_Archer enemy;
+
+  public ArcherStunnedState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, Enemy_Archer _enemy) : base(_enemyBase, _stateMachine, _animBoolName) {
     this.enemy = _enemy;
   }
 

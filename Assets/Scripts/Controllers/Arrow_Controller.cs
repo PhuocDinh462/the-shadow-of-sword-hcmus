@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro.EditorUtilities;
 using UnityEngine;
 
-public class Arrow_Controller : MonoBehaviour
-{
+public class Arrow_Controller : MonoBehaviour {
 
   [SerializeField] private int damage;
-  [SerializeField] private string targetPlayerName = "Player";
+  [SerializeField] private string targetLayerName = "Player";
+
 
   [SerializeField] private float xVelocity;
   [SerializeField] private Rigidbody2D rb;
@@ -14,17 +15,31 @@ public class Arrow_Controller : MonoBehaviour
   [SerializeField] private bool canMove;
   [SerializeField] private bool flipped;
 
-  private void Update() {
+  private CharacterStats stats;
 
+  private void Update() {
     if (canMove)
       rb.velocity = new Vector2(xVelocity, rb.velocity.y);
   }
 
+  public void SetupArrow(float _speed, CharacterStats _stats) {
+    xVelocity = _speed;
+    stats = _stats;
+  }
+
   private void OnTriggerEnter2D(Collider2D collision) {
+    if (collision.GetComponent<CharacterStats>()?.isInvincible == true)
+      return;
 
-    if (collision.gameObject.layer == LayerMask.NameToLayer(targetPlayerName)) {
+    if (collision.gameObject.layer == LayerMask.NameToLayer(targetLayerName)) {
 
-      collision.GetComponent<CharacterStats>()?.TakeDamage(damage);
+      //collision.GetComponent<CharacterStats>()?.TakeDamage(damage);
+
+
+      stats.DoDamage(collision.GetComponent<CharacterStats>());
+
+      if (targetLayerName == "Enemy")
+        Destroy(gameObject);
 
       StuckInto(collision);
     }
@@ -33,10 +48,8 @@ public class Arrow_Controller : MonoBehaviour
   }
 
   private void StuckInto(Collider2D collision) {
-
     GetComponentInChildren<ParticleSystem>().Stop();
     GetComponent<CapsuleCollider2D>().enabled = false;
-
     canMove = false;
     rb.isKinematic = true;
     rb.constraints = RigidbodyConstraints2D.FreezeAll;
@@ -46,12 +59,13 @@ public class Arrow_Controller : MonoBehaviour
   }
 
   public void FlipArrow() {
+    if (flipped)
+      return;
 
-    if (flipped) return;
 
     xVelocity = xVelocity * -1;
     flipped = true;
     transform.Rotate(0, 180, 0);
-    targetPlayerName = "Enemy";
+    targetLayerName = "Enemy";
   }
 }

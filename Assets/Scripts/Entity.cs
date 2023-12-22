@@ -14,17 +14,18 @@ public class Entity : MonoBehaviour {
 
 
   [Header("KnockBack info")]
-  [SerializeField] protected Vector2 knockbackPower;
-  [SerializeField] protected float knockBackDuration;
+  [SerializeField] protected Vector2 knockbackPower = new Vector2(7, 12);
+  [SerializeField] protected Vector2 knockbackOffset = new Vector2(.5f, 2);
+  [SerializeField] protected float knockBackDuration = .07f;
   protected bool isKnocked;
 
   [Header("Collision info")]
   public Transform attackCheck;
-  public float attackCheckRadius;
+  public float attackCheckRadius = 1.2f;
   [SerializeField] protected Transform groundCheck;
-  [SerializeField] protected float groundCheckDistance;
+  [SerializeField] protected float groundCheckDistance = 1;
   [SerializeField] protected Transform wallCheck;
-  [SerializeField] protected float wallCheckDistance;
+  [SerializeField] protected float wallCheckDistance = .8f;
   [SerializeField] protected LayerMask whatIsGround;
 
   public int knockbackDir { get; private set; }
@@ -69,13 +70,15 @@ public class Entity : MonoBehaviour {
   protected virtual IEnumerator HitKnockBack() {
     isKnocked = true;
 
-    rb.velocity = new Vector2(knockbackPower.x * knockbackDir, knockbackPower.y);
+    float xOffset = Random.Range(knockbackOffset.x, knockbackOffset.y);
+
+    if (knockbackPower.x > 0 || knockbackPower.y > 0) // This line makes player immune to freeze effect when he takes hit
+      rb.velocity = new Vector2((knockbackPower.x + xOffset) * knockbackDir, knockbackPower.y);
+
     yield return new WaitForSeconds(knockBackDuration);
 
     isKnocked = false;
     SetupZeroKnockbackPower();
-    rb.velocity = knockbackPower;
-
   }
   protected virtual void SetupZeroKnockbackPower() {
 

@@ -35,7 +35,7 @@ public class PlayerCounterAttackState : PlayerState {
       }
 
       if (hit.GetComponent<Enemy>() != null) {
-        if (hit.GetComponent<Enemy>().CanbeStunned()) {
+        if (hit.GetComponent<Enemy>().CanBeStunned()) {
           SuccessfullCounterAttack();
 
           player.skill.parry.UseSkill(); // goint to use to restore health on parry

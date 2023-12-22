@@ -1,5 +1,7 @@
-public class SkeletonMoveState : SkeletonGroundedState {
-  public SkeletonMoveState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, Enemy_Skeleton _enemy) : base(_enemyBase, _stateMachine, _animBoolName, _enemy) {
+﻿using UnityEngine;
+
+public class ArcherMoveState : ArcherGroundedState {
+  public ArcherMoveState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, Enemy_Archer _enemy) : base(_enemyBase, _stateMachine, _animBoolName, _enemy) {
   }
 
   public override void Enter() {
@@ -16,6 +18,7 @@ public class SkeletonMoveState : SkeletonGroundedState {
     enemy.SetVelocity(enemy.moveSpeed * enemy.facingDir, rb.velocity.y);
 
     if (enemy.isWallDetected() || !enemy.isGroundDetected()) {
+
       enemy.Flip();
       stateMachine.ChangeState(enemy.idleState);
     }

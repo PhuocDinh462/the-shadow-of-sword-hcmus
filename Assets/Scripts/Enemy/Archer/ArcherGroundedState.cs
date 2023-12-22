@@ -1,10 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class SlimeGroundedState : EnemyState {
-  protected Enemy_Slime enemy;
+public class ArcherGroundedState : EnemyState {
   protected Transform player;
+  protected Enemy_Archer enemy;
 
-  public SlimeGroundedState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, Enemy_Slime _enemy) : base(_enemyBase, _stateMachine, _animBoolName) {
+  public ArcherGroundedState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, Enemy_Archer _enemy) : base(_enemyBase, _stateMachine, _animBoolName) {
     this.enemy = _enemy;
   }
 

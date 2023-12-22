@@ -1,7 +1,7 @@
 using System.Collections;
-using Cinemachine;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
+
 public class EntityFX : MonoBehaviour {
   protected Player player;
   protected SpriteRenderer sr;

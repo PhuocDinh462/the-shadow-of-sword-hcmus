@@ -48,8 +48,8 @@ public class SkeletonBattleState : EnemyState {
   }
 
   private bool CanAttack() {
-    if (Time.time >= enemy.lastTimeAttacked + enemy.attackCoolDown) {
-      enemy.attackCoolDown = Random.Range(enemy.minAttackCoolDown, enemy.maxAttackCoolDown);
+    if (Time.time >= enemy.lastTimeAttacked + enemy.attackCooldown) {
+      enemy.attackCooldown = Random.Range(enemy.minAttackCooldown, enemy.maxAttackCooldown);
       enemy.lastTimeAttacked = Time.time;
       return true;
     }

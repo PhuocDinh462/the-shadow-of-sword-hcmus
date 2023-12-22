@@ -5,7 +5,7 @@ public class Enemy_Slime : Enemy {
   public SlimeMoveState moveState { get; private set; }
   public SlimeBattleState battleState { get; private set; }
   public SlimeAttackState attackState { get; private set; }
-  public SlimeStunnedState stunState { get; private set; }
+  public SlimeStunnedState stunnedState { get; private set; }
   public SlimeDeadState deadState { get; private set; }
 
   #endregion
@@ -19,7 +19,7 @@ public class Enemy_Slime : Enemy {
     moveState = new SlimeMoveState(this, stateMachine, "Move", this);
     battleState = new SlimeBattleState(this, stateMachine, "Move", this);
     attackState = new SlimeAttackState(this, stateMachine, "Attack", this);
-    stunState = new SlimeStunnedState(this, stateMachine, "Stunned", this);
+    stunnedState = new SlimeStunnedState(this, stateMachine, "Stunned", this);
     deadState = new SlimeDeadState(this, stateMachine, "Idle", this);
 
   }
@@ -31,9 +31,9 @@ public class Enemy_Slime : Enemy {
 
   }
 
-  public override bool CanbeStunned() {
-    if (base.CanbeStunned()) {
-      stateMachine.ChangeState(stunState);
+  public override bool CanBeStunned() {
+    if (base.CanBeStunned()) {
+      stateMachine.ChangeState(stunnedState);
       return true;
     }
     return false;
