@@ -33,7 +33,7 @@ public class Enemy_Shady : Enemy {
   }
 
   protected override void Start() {
-    base.Start();
+    base.Start();                                                                            
 
     stateMachine.Initialize(idleState);
   }
