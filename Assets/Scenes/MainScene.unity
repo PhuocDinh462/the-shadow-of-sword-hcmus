@@ -2461,7 +2461,7 @@ Transform:
   m_GameObject: {fileID: 119188566}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.67, y: -0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2633,7 +2633,7 @@ Transform:
   m_GameObject: {fileID: 155758750}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.43, y: -1.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13564,7 +13564,7 @@ Transform:
   m_GameObject: {fileID: 317248737}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.08, y: 0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20085,6 +20085,7 @@ GameObject:
   - component: {fileID: 820287348}
   - component: {fileID: 820287349}
   - component: {fileID: 820287350}
+  - component: {fileID: 820287351}
   m_Layer: 0
   m_Name: Animator
   m_TagString: Untagged
@@ -20180,6 +20181,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &820287351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820287347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0692efd7fcc9244eac385c07bbe684f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &823863785
 GameObject:
   m_ObjectHideFlags: 0
@@ -25121,6 +25134,83 @@ RectTransform:
   m_AnchoredPosition: {x: 360, y: 70}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1171797874
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 872592593179698175, guid: a4667eccd2b9789458d47d7a20dc9afb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 872592593179698175, guid: a4667eccd2b9789458d47d7a20dc9afb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 872592593179698175, guid: a4667eccd2b9789458d47d7a20dc9afb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 872592593179698175, guid: a4667eccd2b9789458d47d7a20dc9afb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 19.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 872592593179698175, guid: a4667eccd2b9789458d47d7a20dc9afb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -11.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 872592593179698175, guid: a4667eccd2b9789458d47d7a20dc9afb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 872592593179698175, guid: a4667eccd2b9789458d47d7a20dc9afb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 872592593179698175, guid: a4667eccd2b9789458d47d7a20dc9afb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 872592593179698175, guid: a4667eccd2b9789458d47d7a20dc9afb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 872592593179698175, guid: a4667eccd2b9789458d47d7a20dc9afb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 872592593179698175, guid: a4667eccd2b9789458d47d7a20dc9afb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 872592593179698175, guid: a4667eccd2b9789458d47d7a20dc9afb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 872592593179698175, guid: a4667eccd2b9789458d47d7a20dc9afb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 872592593179698175, guid: a4667eccd2b9789458d47d7a20dc9afb, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138447790375800700, guid: a4667eccd2b9789458d47d7a20dc9afb, type: 3}
+      propertyPath: m_Name
+      value: DeathBringerSpell_Controller
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138447790375800700, guid: a4667eccd2b9789458d47d7a20dc9afb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a4667eccd2b9789458d47d7a20dc9afb, type: 3}
 --- !u!1 &1176684792
 GameObject:
   m_ObjectHideFlags: 0
@@ -28133,7 +28223,7 @@ GameObject:
   - component: {fileID: 1329286191}
   - component: {fileID: 1329286190}
   - component: {fileID: 1329286189}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy_DeathBringer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28177,10 +28267,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackPower: {x: 7, y: 12}
-  knockbackOffset: {x: 0.5, y: 2}
+  knockbackOffset: {x: 0.5, y: 2.3}
   knockBackDuration: 0.07
   attackCheck: {fileID: 119188567}
-  attackCheckRadius: 1.2
+  attackCheckRadius: 2
   groundCheck: {fileID: 155758751}
   groundCheckDistance: 1
   wallCheck: {fileID: 317248738}
@@ -28191,28 +28281,28 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
-  moveSpeed: 1.5
-  idleTime: 2
+  moveSpeed: 3
+  idleTime: 0.7
   battleTime: 7
   stunDuration: 1
   stunDirection: {x: 10, y: 12}
   counterImage: {fileID: 885037694}
-  agroDistance: 2
+  agroDistance: 10
   attackDistance: 2
   attackCooldown: 0
   minAttackCooldown: 1
   maxAttackCooldown: 2
   lastTimeAttacked: 0
   bossFightBegun: 0
-  spellPrefab: {fileID: 0}
-  amountOfSpells: 0
-  spellCooldown: 0
+  spellPrefab: {fileID: 6138447790375800700, guid: a4667eccd2b9789458d47d7a20dc9afb, type: 3}
+  amountOfSpells: 5
+  spellCooldown: 2
   lastTimeCast: 0
-  spellStateCooldown: 0
-  spellOffset: {x: 0, y: 0}
+  spellStateCooldown: 10
+  spellOffset: {x: 3, y: 2.5}
   arena: {fileID: 1882957770}
   surroundingCheckSize: {x: 3, y: 3}
-  chanceToTeleport: 0
+  chanceToTeleport: 40
   defaultChanceToTeleport: 25
 --- !u!114 &1329286190
 MonoBehaviour:
@@ -56762,7 +56852,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -11.213091, y: -2.7272062}
+  m_Offset: {x: -4.6966867, y: -2.7272062}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -56773,7 +56863,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 55.607983, y: 15.680599}
+  m_Size: {x: 42.575172, y: 15.680599}
   m_EdgeRadius: 0
 --- !u!4 &1882957771
 Transform:
@@ -61372,3 +61462,4 @@ SceneRoots:
   - {fileID: 3113507633922382496}
   - {fileID: 1329286188}
   - {fileID: 1882957771}
+  - {fileID: 1171797874}

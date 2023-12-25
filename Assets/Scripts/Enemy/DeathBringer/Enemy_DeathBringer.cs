@@ -34,7 +34,7 @@ public class Enemy_DeathBringer : Enemy
     {
         base.Awake();
 
-        //SetupDefailtFacingDir(-1);
+        SetupDefaultFacingDir(-1);
 
         idleState = new DeathBringerIdleState(this, stateMachine, "Idle", this);
 
@@ -77,8 +77,8 @@ public class Enemy_DeathBringer : Enemy
         Vector3 spellPosition = new Vector3(player.transform.position.x + xOffset, player.transform.position.y + spellOffset.y);
 
         GameObject newSpell = Instantiate(spellPrefab, spellPosition, Quaternion.identity);
-        //newSpell.GetComponent<DeathBringerSpell_Controller>().SetupSpell(stats);
-    }
+        newSpell.GetComponent<DeathBringerSpell_Controller>().SetupSpell(stats);
+  }
 
     public void FindPosition()
     {
