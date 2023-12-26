@@ -1,17 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class Enemy_DeathBringer : Enemy
-{
+public class Enemy_DeathBringer : Enemy {
     #region States
-    public DeathBringerBattleState battleState { get ; private set; }
-    public DeathBringerAttackState attackState { get ; private set; }
-    public DeathBringerIdleState idleState { get ; private set; }
-    public DeathBringerDeadState deadState { get ; private set; }
-    public DeathBringerSpellCastState spellCastState { get ; private set; }
-    public DeathBringerTeleportState teleportState { get ; private set; }
+    public DeathBringerBattleState battleState { get; private set; }
+    public DeathBringerAttackState attackState { get; private set; }
+    public DeathBringerIdleState idleState { get; private set; }
+    public DeathBringerDeadState deadState { get; private set; }
+    public DeathBringerSpellCastState spellCastState { get; private set; }
+    public DeathBringerTeleportState teleportState { get; private set; }
 
     #endregion
     public bool bossFightBegun;
@@ -30,8 +26,7 @@ public class Enemy_DeathBringer : Enemy
     public float chanceToTeleport;
     public float defaultChanceToTeleport = 25;
 
-    protected override void Awake()
-    {
+    protected override void Awake() {
         base.Awake();
 
         SetupDefaultFacingDir(-1);
@@ -46,26 +41,22 @@ public class Enemy_DeathBringer : Enemy
         teleportState = new DeathBringerTeleportState(this, stateMachine, "Teleport", this);
     }
 
-    protected override void Start()
-    {
+    protected override void Start() {
         base.Start();
 
         stateMachine.Initialize(idleState);
     }
 
-    protected override void Update()
-    {
+    protected override void Update() {
         base.Update();
     }
-    public override void Die()
-    {
+    public override void Die() {
         base.Die();
         stateMachine.ChangeState(deadState);
 
     }
 
-    public void CastSpell()
-    {
+    public void CastSpell() {
         Player player = PlayerManager.instance.player;
 
 
@@ -78,18 +69,16 @@ public class Enemy_DeathBringer : Enemy
 
         GameObject newSpell = Instantiate(spellPrefab, spellPosition, Quaternion.identity);
         newSpell.GetComponent<DeathBringerSpell_Controller>().SetupSpell(stats);
-  }
+    }
 
-    public void FindPosition()
-    {
+    public void FindPosition() {
         float x = Random.Range(arena.bounds.min.x + 3, arena.bounds.max.x - 3);
         float y = Random.Range(arena.bounds.min.y + 3, arena.bounds.max.y - 3);
 
         transform.position = new Vector3(x, y);
         transform.position = new Vector3(transform.position.x, transform.position.y - GroundBelow().distance + (cd.size.y / 2));
 
-        if (!GroundBelow() || SomethingIsAround())
-        {
+        if (!GroundBelow() || SomethingIsAround()) {
             //Debug.Log("Looking for new position");
             FindPosition();
         }
@@ -99,8 +88,7 @@ public class Enemy_DeathBringer : Enemy
     private RaycastHit2D GroundBelow() => Physics2D.Raycast(transform.position, Vector2.down, 100, whatIsGround);
     private bool SomethingIsAround() => Physics2D.BoxCast(transform.position, surroundingCheckSize, 0, Vector2.zero, 0, whatIsGround);
 
-    protected override void OnDrawGizmos()
-    {
+    protected override void OnDrawGizmos() {
         base.OnDrawGizmos();
 
         Gizmos.DrawLine(transform.position, new Vector3(transform.position.x, transform.position.y - GroundBelow().distance));
@@ -108,10 +96,8 @@ public class Enemy_DeathBringer : Enemy
     }
 
 
-    public bool CanTeleport()
-    {
-        if (Random.Range(0, 100) <= chanceToTeleport)
-        {
+    public bool CanTeleport() {
+        if (Random.Range(0, 100) <= chanceToTeleport) {
             chanceToTeleport = defaultChanceToTeleport;
             return true;
         }
@@ -120,10 +106,8 @@ public class Enemy_DeathBringer : Enemy
         return false;
     }
 
-    public bool CanDoSpellCast()
-    {
-        if (Time.time >= lastTimeCast + spellStateCooldown)
-        {
+    public bool CanDoSpellCast() {
+        if (Time.time >= lastTimeCast + spellStateCooldown) {
             return true;
         }
 

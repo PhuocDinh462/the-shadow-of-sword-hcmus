@@ -1,7 +1,4 @@
-﻿
-using UnityEngine;
-
-public class ArcherIdleState : ArcherGroundedState {
+﻿public class ArcherIdleState : ArcherGroundedState {
   public ArcherIdleState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, Enemy_Archer _enemy) : base(_enemyBase, _stateMachine, _animBoolName, _enemy) {
   }
 

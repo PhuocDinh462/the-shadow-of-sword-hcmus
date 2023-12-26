@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SlimeBattleState : EnemyState {
-  
+
   private Enemy_Slime enemy;
   private Transform player;
   private int moveDir;

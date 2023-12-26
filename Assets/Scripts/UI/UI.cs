@@ -6,6 +6,7 @@ public class UI : MonoBehaviour, ISaveManager {
   [Header("End screen")]
   [SerializeField] private UI_FadeScreen fadeScreen;
   [SerializeField] private GameObject endText;
+  [SerializeField] private GameObject nextLevelText;
   [SerializeField] private GameObject restartButton;
   [Space]
 
@@ -110,6 +111,16 @@ public class UI : MonoBehaviour, ISaveManager {
   }
 
   public void RestartGameButton() => GameManager.instance.RestartScene();
+
+  public void SwitchOnNextScreen() {
+    fadeScreen.FadeOut();
+    StartCoroutine(NextScreenCoroutine());
+  }
+
+  IEnumerator NextScreenCoroutine() {
+    yield return new WaitForSeconds(1);
+    nextLevelText.SetActive(true);
+  }
 
 
   public void LoadData(GameData _data) {

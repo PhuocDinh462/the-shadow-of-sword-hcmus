@@ -1,40 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class DeathBringerBattleState : EnemyState
-{
+public class DeathBringerBattleState : EnemyState {
     private Enemy_DeathBringer enemy;
     private Transform player;
     private int moveDir;
 
-    public DeathBringerBattleState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, Enemy_DeathBringer _enemy) : base(_enemyBase, _stateMachine, _animBoolName)
-    {
+    public DeathBringerBattleState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, Enemy_DeathBringer _enemy) : base(_enemyBase, _stateMachine, _animBoolName) {
         this.enemy = _enemy;
     }
 
-    public override void Enter()
-    {
+    public override void Enter() {
         base.Enter();
 
         player = PlayerManager.instance.player.transform;
 
         //if (player.GetComponent<PlayerStats>().isDead)
-            //stateMachine.ChangeState(enemy.moveState);
+        //stateMachine.ChangeState(enemy.moveState);
 
 
     }
 
-    public override void Update()
-    {
+    public override void Update() {
         base.Update();
 
-        if (enemy.IsPlayerDetected())
-        {
+        if (enemy.IsPlayerDetected()) {
             stateTimer = enemy.battleTime;
 
-            if (enemy.IsPlayerDetected().distance < enemy.attackDistance)
-            {
+            if (enemy.IsPlayerDetected().distance < enemy.attackDistance) {
                 if (CanAttack())
                     stateMachine.ChangeState(enemy.attackState);
                 else
@@ -53,15 +45,12 @@ public class DeathBringerBattleState : EnemyState
         enemy.SetVelocity(enemy.moveSpeed * moveDir, rb.velocity.y);
     }
 
-    public override void Exit()
-    {
+    public override void Exit() {
         base.Exit();
     }
 
-    private bool CanAttack()
-    {
-        if (Time.time >= enemy.lastTimeAttacked + enemy.attackCooldown)
-        {
+    private bool CanAttack() {
+        if (Time.time >= enemy.lastTimeAttacked + enemy.attackCooldown) {
             enemy.attackCooldown = Random.Range(enemy.minAttackCooldown, enemy.maxAttackCooldown);
             enemy.lastTimeAttacked = Time.time;
             return true;

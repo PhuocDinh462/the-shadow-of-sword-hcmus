@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class SlimeAttackState : EnemyState
-{
+public class SlimeAttackState : EnemyState {
 
   private Enemy_Slime enemy;
 

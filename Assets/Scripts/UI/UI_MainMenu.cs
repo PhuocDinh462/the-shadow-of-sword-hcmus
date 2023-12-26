@@ -3,7 +3,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class UI_MainMenu : MonoBehaviour {
-  [SerializeField] private string sceneName = "MainScene";
+  [SerializeField] private string sceneName = "Level 1";
+  [SerializeField] private GameObject nextLevelText;
   [SerializeField] private GameObject continueButton;
   [SerializeField] UI_FadeScreen fadeScreen;
   [SerializeField] int bgmIndex = 5;
@@ -16,13 +17,13 @@ public class UI_MainMenu : MonoBehaviour {
 
   public void ContinueGame() {
     AudioManager.instance.PlaySFX(7);
-    StartCoroutine(LoadSceneWithFadeEffect(1.5f));
+    StartCoroutine(LoadSceneWithFadeEffect(4f));
   }
 
   public void NewGame() {
     AudioManager.instance.PlaySFX(7);
     SaveManager.instance.DeleteSavedData();
-    StartCoroutine(LoadSceneWithFadeEffect(1.5f));
+    StartCoroutine(LoadSceneWithFadeEffect(4f));
   }
 
   public void ExitGame() {
@@ -32,9 +33,14 @@ public class UI_MainMenu : MonoBehaviour {
 
   IEnumerator LoadSceneWithFadeEffect(float _delay) {
     fadeScreen.FadeOut();
-
+    StartCoroutine(NextScreenCoroutine());
     yield return new WaitForSeconds(_delay);
 
     SceneManager.LoadScene(sceneName);
+  }
+
+  IEnumerator NextScreenCoroutine() {
+    yield return new WaitForSeconds(1);
+    nextLevelText.SetActive(true);
   }
 }

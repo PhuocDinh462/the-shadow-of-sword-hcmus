@@ -27,7 +27,6 @@ public class SaveManager : MonoBehaviour {
   private void Start() {
     dataHandler = new FileDataHandler(Application.persistentDataPath, fileName, encryptData);
     saveManagers = FindAllSaveManagers();
-
     LoadGame();
   }
 
