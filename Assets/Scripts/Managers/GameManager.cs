@@ -69,6 +69,7 @@ public class GameManager : MonoBehaviour, ISaveManager {
   }
 
   public void SaveData(ref GameData _data) {
+    _data.level = SceneManager.GetActiveScene().name;
     _data.lostCurrencyAmount = lostCurrencyAmount;
     _data.lostCurrencyX = player.position.x;
     _data.lostCurrencyY = player.position.y;

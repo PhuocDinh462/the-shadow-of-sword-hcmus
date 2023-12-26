@@ -18,6 +18,8 @@ public class GameData {
   public SerializableDictionary<string, bool> checkpoints;
   public string closestCheckpointId;
 
+  public string level;
+
   public GameData() {
     this.lostCurrencyX = 0;
     this.lostCurrencyY = 0;

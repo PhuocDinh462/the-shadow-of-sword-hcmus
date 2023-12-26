@@ -1,8 +1,9 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class UI_MainMenu : MonoBehaviour {
+public class UI_MainMenu : MonoBehaviour, ISaveManager {
   [SerializeField] private string sceneName = "Level 1";
   [SerializeField] private GameObject nextLevelText;
   [SerializeField] private GameObject continueButton;
@@ -17,13 +18,14 @@ public class UI_MainMenu : MonoBehaviour {
 
   public void ContinueGame() {
     AudioManager.instance.PlaySFX(7);
-    StartCoroutine(LoadSceneWithFadeEffect(4f));
+    StartCoroutine(LoadSceneWithFadeEffect(5f));
   }
 
   public void NewGame() {
     AudioManager.instance.PlaySFX(7);
     SaveManager.instance.DeleteSavedData();
-    StartCoroutine(LoadSceneWithFadeEffect(4f));
+    sceneName = "Level 1";
+    StartCoroutine(LoadSceneWithFadeEffect(5f));
   }
 
   public void ExitGame() {
@@ -41,6 +43,14 @@ public class UI_MainMenu : MonoBehaviour {
 
   IEnumerator NextScreenCoroutine() {
     yield return new WaitForSeconds(1);
+    nextLevelText.GetComponent<TextMeshProUGUI>().text = sceneName;
     nextLevelText.SetActive(true);
   }
+
+  public void LoadData(GameData _data) {
+    if (_data.level != null)
+      sceneName = _data.level;
+  }
+
+  public void SaveData(ref GameData _data) { }
 }
