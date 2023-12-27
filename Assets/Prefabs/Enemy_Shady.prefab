@@ -348,7 +348,7 @@ RectTransform:
   m_Father: {fileID: 5493369498059989396}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -902,9 +902,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9013249cf2573184dbe2dea69d45ca16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possibleItemDrop: 0
-  possibleDrop: []
-  dropPrefab: {fileID: 0}
+  possibleItemDrop: 2
+  possibleDrop:
+  - {fileID: 11400000, guid: fcf5775a386514d40bebfcdd1770ce74, type: 2}
+  - {fileID: 11400000, guid: fed09651a3b29274b8c24b7c40a12dd9, type: 2}
+  - {fileID: 11400000, guid: cef6b67fbe53e4a6e879f8657ff18f6d, type: 2}
+  dropPrefab: {fileID: 3210127014373011679, guid: 00c1840ca9e8c0949af0844c807ea364, type: 3}
 --- !u!114 &6054937734645789549
 MonoBehaviour:
   m_ObjectHideFlags: 0
