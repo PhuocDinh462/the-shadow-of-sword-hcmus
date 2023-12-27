@@ -27654,7 +27654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xLimit: 960
-  yLimit: 540
+  yLimit: 700
   xOffset: 150
   yOffset: 350
   itemNameText: {fileID: 1248279669}

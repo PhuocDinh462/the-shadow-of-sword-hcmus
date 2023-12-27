@@ -7,6 +7,7 @@ public class NextLevel : MonoBehaviour {
 
   private void OnTriggerEnter2D(Collider2D collision) {
     if (collision.GetComponent<Player>() != null) {
+      GameObject.Find("SaveManager").GetComponent<SaveManager>().SaveGame();
       StartCoroutine(LoadSceneWithFadeEffect(5f));
       GameObject.Find("Canvas").GetComponent<UI>().SwitchOnNextScreen();
     }
