@@ -555,11 +555,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9013249cf2573184dbe2dea69d45ca16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possibleItemDrop: 3
+  possibleItemDrop: 1
   possibleDrop:
-  - {fileID: 11400000, guid: fcf5775a386514d40bebfcdd1770ce74, type: 2}
-  - {fileID: 11400000, guid: fed09651a3b29274b8c24b7c40a12dd9, type: 2}
-  - {fileID: 11400000, guid: e0606c5947e3e422cb0c07d1b8c92315, type: 2}
+  - {fileID: 11400000, guid: 51a4ffa262b82c2439d23f1e386ad9ec, type: 2}
   dropPrefab: {fileID: 3210127014373011679, guid: 00c1840ca9e8c0949af0844c807ea364, type: 3}
 --- !u!114 &8428151811695376422
 MonoBehaviour:

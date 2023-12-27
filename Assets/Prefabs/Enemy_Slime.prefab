@@ -145,7 +145,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1094165773886946900}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.863329, y: -0.051742554, z: 0.31394398}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -345,6 +345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackPower: {x: 7, y: 12}
+  knockbackOffset: {x: 0.5, y: 2}
   knockBackDuration: 0.07
   attackCheck: {fileID: 7839259281682366512}
   attackCheckRadius: 0.8
@@ -364,10 +365,11 @@ MonoBehaviour:
   stunDuration: 2.5
   stunDirection: {x: 10, y: 12}
   counterImage: {fileID: 832679815389525414}
+  agroDistance: 2
   attackDistance: 1.4
-  attackCoolDown: 0
-  minAttackCoolDown: 0.15
-  maxAttackCoolDown: 0.35
+  attackCooldown: 0
+  minAttackCooldown: 1
+  maxAttackCooldown: 2
   lastTimeAttacked: 0
 --- !u!1 &1488919401789906291
 GameObject:
