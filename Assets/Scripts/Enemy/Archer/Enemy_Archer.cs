@@ -71,6 +71,7 @@ public class Enemy_Archer : Enemy {
 
   public override void AnimationSpecialAttackTrigger() {
     GameObject newArrow = Instantiate(arrowPrefab, attackCheck.position, Quaternion.identity);
+    Debug.Log(facingDir);
     newArrow.GetComponent<Arrow_Controller>().SetupArrow(arrowSpeed * facingDir, stats);
   }
 

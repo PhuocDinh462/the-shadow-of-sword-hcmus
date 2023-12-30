@@ -20,6 +20,9 @@ public class Arrow_Controller : MonoBehaviour {
   }
 
   public void SetupArrow(float _speed, CharacterStats _stats) {
+    if(_speed < 0)
+      transform.Rotate(0, 180, 0);
+
     xVelocity = _speed;
     stats = _stats;
   }

@@ -20,7 +20,6 @@ public class EnemyState {
     triggerCalled = false;
     enemyBase.anim.SetBool(animBoolName, true);
     rb = enemyBase.rb;
-    Debug.Log(animBoolName);
   }
 
   public virtual void Exit() {
