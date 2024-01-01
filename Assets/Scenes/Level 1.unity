@@ -64082,26 +64082,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2529539381063013744, guid: 3979bc4a160630c459ab064f43d24a2f, type: 3}
-      propertyPath: damage.baseValue
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2529539381063013744, guid: 3979bc4a160630c459ab064f43d24a2f, type: 3}
-      propertyPath: iceDamage.baseValue
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2529539381063013744, guid: 3979bc4a160630c459ab064f43d24a2f, type: 3}
-      propertyPath: fireDamage.baseValue
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2529539381063013744, guid: 3979bc4a160630c459ab064f43d24a2f, type: 3}
-      propertyPath: lightningDamage.baseValue
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2529539381063013744, guid: 3979bc4a160630c459ab064f43d24a2f, type: 3}
-      propertyPath: magicResistance.baseValue
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4709628381508902817, guid: 3979bc4a160630c459ab064f43d24a2f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -64.08

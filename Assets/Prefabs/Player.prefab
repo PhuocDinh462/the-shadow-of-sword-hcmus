@@ -20016,7 +20016,7 @@ MonoBehaviour:
     baseValue: 10
     modifiers: 
   damage:
-    baseValue: 30
+    baseValue: 10
     modifiers: 
   critChance:
     baseValue: 75
@@ -20025,7 +20025,7 @@ MonoBehaviour:
     baseValue: 0
     modifiers: 
   maxHealth:
-    baseValue: 100
+    baseValue: 200
     modifiers: 
   armor:
     baseValue: 20
@@ -20034,16 +20034,16 @@ MonoBehaviour:
     baseValue: 0
     modifiers: 
   magicResistance:
-    baseValue: 1
+    baseValue: 0
     modifiers: 
   fireDamage:
-    baseValue: 1
+    baseValue: 5
     modifiers: 
   iceDamage:
-    baseValue: 0
+    baseValue: 5
     modifiers: 
   lightningDamage:
-    baseValue: 0
+    baseValue: 5
     modifiers: 
   isIgnited: 0
   isChilled: 0
