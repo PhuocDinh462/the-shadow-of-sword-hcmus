@@ -815,7 +815,7 @@ MonoBehaviour:
     baseValue: 0
     modifiers: 
   intelligence:
-    baseValue: 0
+    baseValue: 10
     modifiers: 
   vitality:
     baseValue: 0
@@ -854,7 +854,7 @@ MonoBehaviour:
   isChilled: 0
   isShocked: 0
   ailmentsDuration: 2
-  shockStrikePrefab: {fileID: 0}
+  shockStrikePrefab: {fileID: 3288421031432038906, guid: c51c1e8ac52ea46bdb3a82f5f12d7384, type: 3}
   currentHealth: 0
   soulsDropAmount:
     baseValue: 0
@@ -873,7 +873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfe925f49ae9c0489b0aa1824c84a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popUpTextPrefab: {fileID: 0}
+  popUpTextPrefab: {fileID: 5311715261690838674, guid: 6245f245151884c3ebefe4647f30cc31, type: 3}
   flashDuration: 0.2
   hitMat: {fileID: 2100000, guid: dd0ed22d1886cbc4793ad459cbc9d51c, type: 2}
   igniteColor:
@@ -907,6 +907,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fcf5775a386514d40bebfcdd1770ce74, type: 2}
   - {fileID: 11400000, guid: fed09651a3b29274b8c24b7c40a12dd9, type: 2}
   - {fileID: 11400000, guid: cef6b67fbe53e4a6e879f8657ff18f6d, type: 2}
+  - {fileID: 11400000, guid: 56ab6651176a7ed40b35b05946884402, type: 2}
+  - {fileID: 11400000, guid: c046fee7d7444ec46a02191fb82e75db, type: 2}
   dropPrefab: {fileID: 3210127014373011679, guid: 00c1840ca9e8c0949af0844c807ea364, type: 3}
 --- !u!114 &6054937734645789549
 MonoBehaviour:

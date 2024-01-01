@@ -511,13 +511,13 @@ MonoBehaviour:
     baseValue: 0
     modifiers: 
   damage:
-    baseValue: 50
+    baseValue: 10
     modifiers: 
   critChance:
-    baseValue: 99
+    baseValue: 10
     modifiers: 
   critPower:
-    baseValue: 0
+    baseValue: 5
     modifiers: 
   maxHealth:
     baseValue: 100

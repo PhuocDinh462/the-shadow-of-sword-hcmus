@@ -114,7 +114,7 @@ public class Enemy : Entity {
   public virtual void AnimationFinishTrigger() => stateMachine.currentState.AnimationFinishTrigger();
   public virtual void AnimationSpecialAttackTrigger() {}
 
-  public virtual RaycastHit2D IsPlayerDetected() => Physics2D.Raycast(wallCheck.position, Vector2.right * facingDir, 50, whatIsPlayer);
+  public virtual RaycastHit2D IsPlayerDetected() => Physics2D.Raycast(wallCheck.position, Vector2.right * facingDir, 5, whatIsPlayer);
 
   protected override void OnDrawGizmos() {
     base.OnDrawGizmos();

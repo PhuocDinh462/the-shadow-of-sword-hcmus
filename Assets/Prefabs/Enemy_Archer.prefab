@@ -462,10 +462,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strength:
-    baseValue: 0
+    baseValue: 5
     modifiers: 
   agility:
-    baseValue: 0
+    baseValue: 5
     modifiers: 
   intelligence:
     baseValue: 0
@@ -474,7 +474,7 @@ MonoBehaviour:
     baseValue: 0
     modifiers: 
   damage:
-    baseValue: 25
+    baseValue: 0
     modifiers: 
   critChance:
     baseValue: 0
@@ -507,7 +507,7 @@ MonoBehaviour:
   isChilled: 0
   isShocked: 0
   ailmentsDuration: 2
-  shockStrikePrefab: {fileID: 0}
+  shockStrikePrefab: {fileID: 3288421031432038906, guid: c51c1e8ac52ea46bdb3a82f5f12d7384, type: 3}
   currentHealth: 0
   soulsDropAmount:
     baseValue: 0
