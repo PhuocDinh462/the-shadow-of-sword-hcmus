@@ -15679,7 +15679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7290757586252627001, guid: cefe5325f3543244fbf7d1dc8349c9fe, type: 3}
       propertyPath: damage.baseValue
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7290757586252627001, guid: cefe5325f3543244fbf7d1dc8349c9fe, type: 3}
       propertyPath: percentageModifier
@@ -16498,7 +16498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7816160415319014191, guid: dbfd5f00271b8b546ab67b9549d51ceb, type: 3}
       propertyPath: maxHealth.baseValue
-      value: 75
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7816160415319014191, guid: dbfd5f00271b8b546ab67b9549d51ceb, type: 3}
       propertyPath: soulsDropAmount.baseValue
@@ -20986,7 +20986,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7290757586252627001, guid: cefe5325f3543244fbf7d1dc8349c9fe, type: 3}
       propertyPath: damage.baseValue
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7290757586252627001, guid: cefe5325f3543244fbf7d1dc8349c9fe, type: 3}
       propertyPath: percentageModifier
@@ -24976,7 +24976,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2112087576975195070, guid: c21494f95f505454cb68c9efd9fad0bb, type: 3}
       propertyPath: level
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2112087576975195070, guid: c21494f95f505454cb68c9efd9fad0bb, type: 3}
       propertyPath: damage.baseValue
@@ -24988,11 +24988,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2112087576975195070, guid: c21494f95f505454cb68c9efd9fad0bb, type: 3}
       propertyPath: maxHealth.baseValue
-      value: 200
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 2112087576975195070, guid: c21494f95f505454cb68c9efd9fad0bb, type: 3}
       propertyPath: critChance.baseValue
-      value: 25
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2112087576975195070, guid: c21494f95f505454cb68c9efd9fad0bb, type: 3}
       propertyPath: soulsDropAmount.baseValue
@@ -35254,7 +35254,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2112087576975195070, guid: c21494f95f505454cb68c9efd9fad0bb, type: 3}
       propertyPath: level
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2112087576975195070, guid: c21494f95f505454cb68c9efd9fad0bb, type: 3}
       propertyPath: damage.baseValue
@@ -35266,11 +35266,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2112087576975195070, guid: c21494f95f505454cb68c9efd9fad0bb, type: 3}
       propertyPath: maxHealth.baseValue
-      value: 200
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 2112087576975195070, guid: c21494f95f505454cb68c9efd9fad0bb, type: 3}
       propertyPath: critChance.baseValue
-      value: 25
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2112087576975195070, guid: c21494f95f505454cb68c9efd9fad0bb, type: 3}
       propertyPath: soulsDropAmount.baseValue
@@ -39268,7 +39268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7290757586252627001, guid: cefe5325f3543244fbf7d1dc8349c9fe, type: 3}
       propertyPath: damage.baseValue
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7290757586252627001, guid: cefe5325f3543244fbf7d1dc8349c9fe, type: 3}
       propertyPath: percentageModifier
@@ -39863,7 +39863,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7290757586252627001, guid: cefe5325f3543244fbf7d1dc8349c9fe, type: 3}
       propertyPath: damage.baseValue
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7290757586252627001, guid: cefe5325f3543244fbf7d1dc8349c9fe, type: 3}
       propertyPath: percentageModifier
@@ -66793,7 +66793,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7816160415319014191, guid: dbfd5f00271b8b546ab67b9549d51ceb, type: 3}
       propertyPath: maxHealth.baseValue
-      value: 75
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7816160415319014191, guid: dbfd5f00271b8b546ab67b9549d51ceb, type: 3}
       propertyPath: soulsDropAmount.baseValue
@@ -70439,7 +70439,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2112087576975195070, guid: c21494f95f505454cb68c9efd9fad0bb, type: 3}
       propertyPath: level
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2112087576975195070, guid: c21494f95f505454cb68c9efd9fad0bb, type: 3}
       propertyPath: damage.baseValue
@@ -70451,11 +70451,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2112087576975195070, guid: c21494f95f505454cb68c9efd9fad0bb, type: 3}
       propertyPath: maxHealth.baseValue
-      value: 200
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 2112087576975195070, guid: c21494f95f505454cb68c9efd9fad0bb, type: 3}
       propertyPath: critChance.baseValue
-      value: 25
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2112087576975195070, guid: c21494f95f505454cb68c9efd9fad0bb, type: 3}
       propertyPath: soulsDropAmount.baseValue
