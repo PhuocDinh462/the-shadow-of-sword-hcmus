@@ -236,19 +236,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strength:
-    baseValue: 0
+    baseValue: 1
     modifiers: 
   agility:
-    baseValue: 0
+    baseValue: 1
     modifiers: 
   intelligence:
-    baseValue: 0
+    baseValue: 1
     modifiers: 
   vitality:
-    baseValue: 0
+    baseValue: 1
     modifiers: 
   damage:
-    baseValue: 10
+    baseValue: 20
     modifiers: 
   critChance:
     baseValue: 10
@@ -257,7 +257,7 @@ MonoBehaviour:
     baseValue: 5
     modifiers: 
   maxHealth:
-    baseValue: 300
+    baseValue: 100
     modifiers: 
   armor:
     baseValue: 0
@@ -286,8 +286,8 @@ MonoBehaviour:
   soulsDropAmount:
     baseValue: 100
     modifiers: 
-  level: 2
-  percentageModifier: 0.5
+  level: 1
+  percentageModifier: 0.4
 --- !u!114 &3439947586209578593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,14 +330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possibleItemDrop: 2
-  possibleDrop:
-  - {fileID: 11400000, guid: fcf5775a386514d40bebfcdd1770ce74, type: 2}
-  - {fileID: 11400000, guid: fed09651a3b29274b8c24b7c40a12dd9, type: 2}
-  - {fileID: 11400000, guid: cef6b67fbe53e4a6e879f8657ff18f6d, type: 2}
-  - {fileID: 11400000, guid: e0606c5947e3e422cb0c07d1b8c92315, type: 2}
-  - {fileID: 11400000, guid: 9a8bc3910fdc88e4bb493a2305ad9082, type: 2}
-  - {fileID: 11400000, guid: 9c7bbb2d405f744f7806dc82e4cece8a, type: 2}
-  - {fileID: 11400000, guid: 70008df554fb18445b22d08c42bd5d00, type: 2}
+  possibleDrop: []
   dropPrefab: {fileID: 3210127014373011679, guid: 00c1840ca9e8c0949af0844c807ea364, type: 3}
 --- !u!114 &8517682343740310183
 MonoBehaviour:

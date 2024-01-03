@@ -20004,22 +20004,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strength:
-    baseValue: 0
+    baseValue: 5
     modifiers: 
   agility:
-    baseValue: 0
+    baseValue: 5
     modifiers: 
   intelligence:
-    baseValue: 0
+    baseValue: 5
     modifiers: 
   vitality:
     baseValue: 10
     modifiers: 
   damage:
-    baseValue: 10
+    baseValue: 20
     modifiers: 
   critChance:
-    baseValue: 25
+    baseValue: 10
     modifiers: 
   critPower:
     baseValue: 10

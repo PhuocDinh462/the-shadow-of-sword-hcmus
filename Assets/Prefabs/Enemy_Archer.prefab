@@ -468,7 +468,7 @@ MonoBehaviour:
     baseValue: 5
     modifiers: 
   intelligence:
-    baseValue: 0
+    baseValue: 5
     modifiers: 
   vitality:
     baseValue: 0
@@ -477,10 +477,10 @@ MonoBehaviour:
     baseValue: 35
     modifiers: 
   critChance:
-    baseValue: 0
+    baseValue: 10
     modifiers: 
   critPower:
-    baseValue: 0
+    baseValue: 10
     modifiers: 
   maxHealth:
     baseValue: 150
@@ -512,8 +512,8 @@ MonoBehaviour:
   soulsDropAmount:
     baseValue: 100
     modifiers: 
-  level: 2
-  percentageModifier: 0.5
+  level: 1
+  percentageModifier: 0.4
 --- !u!114 &781695073066330211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -555,15 +555,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9013249cf2573184dbe2dea69d45ca16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possibleItemDrop: 2
-  possibleDrop:
-  - {fileID: 11400000, guid: fcf5775a386514d40bebfcdd1770ce74, type: 2}
-  - {fileID: 11400000, guid: fed09651a3b29274b8c24b7c40a12dd9, type: 2}
-  - {fileID: 11400000, guid: cef6b67fbe53e4a6e879f8657ff18f6d, type: 2}
-  - {fileID: 11400000, guid: e0606c5947e3e422cb0c07d1b8c92315, type: 2}
-  - {fileID: 11400000, guid: 9a8bc3910fdc88e4bb493a2305ad9082, type: 2}
-  - {fileID: 11400000, guid: 9c7bbb2d405f744f7806dc82e4cece8a, type: 2}
-  - {fileID: 11400000, guid: 70008df554fb18445b22d08c42bd5d00, type: 2}
+  possibleItemDrop: 3
+  possibleDrop: []
   dropPrefab: {fileID: 3210127014373011679, guid: 00c1840ca9e8c0949af0844c807ea364, type: 3}
 --- !u!114 &8428151811695376422
 MonoBehaviour:
@@ -612,7 +605,7 @@ MonoBehaviour:
   safeDistance: 3
   lastTimeJumped: 0
   groundBehindCheck: {fileID: 287727574103496542}
-  groundBehindCheckSize: {x: 2, y: 8}
+  groundBehindCheckSize: {x: 2, y: 2}
 --- !u!1 &4740155046362572313
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,7 +782,7 @@ Transform:
   m_GameObject: {fileID: 6322973551450963803}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8, y: -5, z: 0}
+  m_LocalPosition: {x: -8, y: -3.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
