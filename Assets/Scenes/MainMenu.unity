@@ -942,6 +942,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3917787044493720632, guid: 764294c55e2a9074ba50b5ce37e14a93, type: 3}
+      propertyPath: bgmIndex
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1605,7 +1609,6 @@ MonoBehaviour:
   nextLevelText: {fileID: 861797201}
   continueButton: {fileID: 1649295681}
   fadeScreen: {fileID: 276764899}
-  bgmIndex: 5
 --- !u!114 &1944178716
 MonoBehaviour:
   m_ObjectHideFlags: 0

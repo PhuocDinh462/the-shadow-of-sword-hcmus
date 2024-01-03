@@ -8,12 +8,10 @@ public class UI_MainMenu : MonoBehaviour, ISaveManager {
   [SerializeField] private GameObject nextLevelText;
   [SerializeField] private GameObject continueButton;
   [SerializeField] UI_FadeScreen fadeScreen;
-  [SerializeField] int bgmIndex = 5;
 
   private void Start() {
     if (!SaveManager.instance.HasSavedData())
       continueButton.SetActive(false);
-    AudioManager.instance.PlayBGM(bgmIndex);
   }
 
   public void ContinueGame() {

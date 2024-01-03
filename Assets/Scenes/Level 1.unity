@@ -15671,6 +15671,7 @@ MonoBehaviour:
   stashSlotParent: {fileID: 291012985}
   equipmentSlotParent: {fileID: 860925703}
   statSlotParent: {fileID: 922832728}
+  itemDataBase: []
   loadedItems: []
   loadedEquipment: []
 --- !u!4 &123141744
@@ -82551,6 +82552,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 415508131499281364, guid: 764294c55e2a9074ba50b5ce37e14a93, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535229322911764169, guid: 764294c55e2a9074ba50b5ce37e14a93, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3315700911802334905, guid: 764294c55e2a9074ba50b5ce37e14a93, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3576577510741290064, guid: 764294c55e2a9074ba50b5ce37e14a93, type: 3}
       propertyPath: m_Name
       value: AudioManager
@@ -82558,6 +82571,14 @@ PrefabInstance:
     - target: {fileID: 5120265922398360219, guid: 764294c55e2a9074ba50b5ce37e14a93, type: 3}
       propertyPath: Loop
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6032096990314644361, guid: 764294c55e2a9074ba50b5ce37e14a93, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9194907317553488056, guid: 764294c55e2a9074ba50b5ce37e14a93, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
