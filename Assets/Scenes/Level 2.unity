@@ -46693,7 +46693,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 787034040}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1865997429}
+        m_TargetAssemblyTypeName: UI_Options, Assembly-CSharp
+        m_MethodName: GoToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &787034040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131849,6 +131861,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cbe2a7f7f4e0d64c860052b667f72ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenuSceneName: MainMenu
+  fadeScreen: {fileID: 1560046060}
 --- !u!1 &1876681559
 GameObject:
   m_ObjectHideFlags: 0
@@ -136672,6 +136686,10 @@ PrefabInstance:
       propertyPath: fadeScreen
       value: 
       objectReference: {fileID: 1560046060}
+    - target: {fileID: 6543288267154028005, guid: c05f8d90d98160b46919ce242785b14b, type: 3}
+      propertyPath: nextSceneName
+      value: Level 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -137262,6 +137280,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1153515848}
     m_Modifications:
+    - target: {fileID: 195671877092505703, guid: 17c4f690a2484344483dbf059fa73182, type: 3}
+      propertyPath: m_text
+      value: Level 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1619936218243361055, guid: 17c4f690a2484344483dbf059fa73182, type: 3}
       propertyPath: m_Name
       value: Next level - Text
