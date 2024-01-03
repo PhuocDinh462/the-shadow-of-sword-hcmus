@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Ice And Fire
   itemIcon: {fileID: 1398721256, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
   itemId: 70008df554fb18445b22d08c42bd5d00
-  dropChance: 0
+  dropChance: 15
   equipmentType: 0
   itemCooldown: 0
   itemEffects:
@@ -26,10 +26,10 @@ MonoBehaviour:
   agility: 0
   intelligence: 0
   vitality: 0
-  damage: 10
+  damage: 20
   critChance: 0
   critPower: 0
-  health: 15
+  health: 0
   armor: 0
   evasion: 0
   magicResistance: 0

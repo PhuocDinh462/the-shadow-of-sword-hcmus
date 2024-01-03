@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Ice flask
   itemIcon: {fileID: -923979039, guid: be55291aae08d434db3da3b59db3ab4a, type: 3}
   itemId: 3a3d62b299e003a459eeea18711eedb3
-  dropChance: 16
+  dropChance: 20
   equipmentType: 3
   itemCooldown: 15
   itemEffects: []

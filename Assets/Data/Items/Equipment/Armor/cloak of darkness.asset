@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 950eb9676d6d3ba4a93493a5c1443f1d, type: 3}
-  m_Name: cloak of darkness
+  m_Name: Cloak of darkness
   m_EditorClassIdentifier: 
   itemType: 1
-  itemName: Plate armor
+  itemName: Cloak of darkness
   itemIcon: {fileID: -273343914, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
   itemId: 9733d6cb6af531345a34b827eea21fb4
-  dropChance: 10.6
+  dropChance: 20
   equipmentType: 1
   itemCooldown: 0
   itemEffects: []

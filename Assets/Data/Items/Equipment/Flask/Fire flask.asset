@@ -32,7 +32,7 @@ MonoBehaviour:
   armor: 0
   evasion: 0
   magicResistance: 0
-  fireDamage: 10
+  fireDamage: 15
   iceDamage: 0
   lightningDamage: 0
   craftingMaterials:

@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Armor flask
   itemIcon: {fileID: -165920498, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
   itemId: a56711074192a4d4c9f0f9a9180bfe58
-  dropChance: 21
+  dropChance: 20
   equipmentType: 3
   itemCooldown: 15
   itemEffects:
@@ -29,8 +29,8 @@ MonoBehaviour:
   damage: 0
   critChance: 0
   critPower: 0
-  health: 0
-  armor: 20
+  health: 30
+  armor: 50
   evasion: 0
   magicResistance: 0
   fireDamage: 0

@@ -16,10 +16,11 @@ MonoBehaviour:
   itemName: Knight armor
   itemIcon: {fileID: -965925972, guid: be55291aae08d434db3da3b59db3ab4a, type: 3}
   itemId: 452947b099e68bc459e7d19eefae6836
-  dropChance: 11
+  dropChance: 15
   equipmentType: 1
   itemCooldown: 0
-  itemEffects: []
+  itemEffects:
+  - {fileID: 11400000, guid: 360ae90275e737b4a809b752802800de, type: 2}
   strength: 0
   agility: 0
   intelligence: 0
@@ -29,11 +30,13 @@ MonoBehaviour:
   critPower: 0
   health: 60
   armor: 50
-  evasion: 10
-  magicResistance: 10
+  evasion: 20
+  magicResistance: 20
   fireDamage: 0
   iceDamage: 0
   lightningDamage: 0
   craftingMaterials:
   - data: {fileID: 11400000, guid: fcf5775a386514d40bebfcdd1770ce74, type: 2}
+    stackSize: 1
+  - data: {fileID: 11400000, guid: fed09651a3b29274b8c24b7c40a12dd9, type: 2}
     stackSize: 1
